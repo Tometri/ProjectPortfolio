@@ -1,1 +1,0 @@
-This section documents hands-on Linux system administration work completed for IST2263: Advanced Network Administration Using Linux. Topics include filesystem management, permissions, user/group administration, basic networking, and service management.
