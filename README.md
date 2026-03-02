@@ -1,47 +1,49 @@
 # ProjectPortfolio
 
-This repository is my technical portfolio as I transition from landscaping into IT and cybersecurity.  
-It contains:
+Technical portfolio documenting coursework, labs, and self-study as I transition into IT and cybersecurity.
 
-- **School labs** (MGCCC Spring 2026): Linux administration, networking, project management, forensics
-- **Self-study projects**: home lab work, certification prep (Azure, CompTIA), experiments
-- **Hands-on labs**: focused, task-based exercises (e.g., file system design, user/permission management)
+## Quick Navigation
 
----
+- [Repository Index](docs/index.md)
+- [Structure Roadmap](docs/portfolio-roadmap.md)
+- [Naming Conventions](docs/naming-conventions.md)
+- [School Work](school/README.md)
+- [Self-Study](self-study/README.md)
+- [Labs](labs/README.md)
+- [Resume](resume/README.md)
 
-## Repository Map
+## Current Repository Layout
 
 - `school/MGCCC-Spring2026/`
-  - Course-specific work with assignments, labs, and documentation.
-- `labs/`
-  - Standalone labs focused on specific skills (Linux, networking, security).
+  - Course folders with assignments, notes, screenshots, and submissions.
 - `self-study/`
-  - Personal projects and practice outside of class.
+  - Topic-based folders (`cloud`, `linux`, `networking`, `scripting`, `security`).
+- `labs/`
+  - Standalone lab work and artifacts.
+- `resume/`
+  - Resume versions and related documents.
+- `docs/`
+  - Repository organization, indexes, and standards.
+- `scripts/`
+  - Utility scripts for repository maintenance.
 
----
+## Highlighted Work (Current Paths)
 
-## Technologies & Skills Demonstrated
+- [IST2263 - Advanced Admin Linux](school/MGCCC-Spring2026/IST2263-AdvAdminLinux/README.odt)
+- [IST1613 - Computer Forensics](school/MGCCC-Spring2026/IST1613-CompForensics/README.txt)
+- [IST2533 - IT Project Management](school/MGCCC-Spring2026/IST2533-ITProjectManagement/README.odt)
+- [Bill Split Calculator (Python)](self-study/scripting/bill-split-calculator.py)
 
-- **Operating Systems**: Ubuntu, Windows
-- **Skills**: Linux CLI, user/group management, permissions, file systems, basic networking, documentation
-- **Tools**: VirtualBox, VS Code,
+## Skills Demonstrated
 
----
+- Linux command line and administration
+- Filesystem and permissions management
+- Basic digital forensics workflows
+- Project and technical documentation
+- Windows and Ubuntu lab environments
 
-## Highlighted Projects
+## Next Cleanup Targets
 
-- [Filesystem Design & Implementation (Linux)](school/MGCCC-Spring2026/IST2263-Advanced-Linux-Admin/Lab4-Filesystem-Design/README.md)
-- [Home Lab: Multi-VM Network Setup](labs/HomeLab-MultiVM-Network/README.md)
-- [Azure Fundamentals Labs](self-study/Azure-Fundamentals/README.md)
-
-*(Links above will work as you create those folders/files.)*
-
----
-
-## About Me
-
-I’m currently a landscaper and IT/cybersecurity student, building experience through:
-
-- College coursework (MGCCC – Spring 2026)
-- Home labs using Linux VMs and cloud platforms
-- Self-directed study for certifications
+- Normalize folder names to `kebab-case` over time.
+- Add Markdown `README.md` files beside major binary submissions.
+- Expand `labs/` with standalone reproducible labs.
