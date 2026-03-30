@@ -3,58 +3,381 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Portfolio</title>
+    <meta name="description" content="Tometri's Portfolio - PowerShell & Python Developer | IT & Cybersecurity">
+    <meta name="theme-color" content="#0d1117">
+    <title>Tometri | Portfolio - IT & Cybersecurity Professional</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Discover my work and skills.</p>
-        <a href="#about">Learn more</a>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate web developer with experience in various technologies.</p>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-        </ul>
-    </section>
-    <section id="work">
-        <h2>My Work</h2>
-        <div class="projects">
-            <article>
-                <h3>Project 1</h3>
-                <p>Description of project 1.</p>
-            </article>
-            <article>
-                <h3>Project 2</h3>
-                <p>Description of project 2.</p>
-            </article>
-            <article>
-                <h3>Project 3</h3>
-                <p>Description of project 3.</p>
-            </article>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <div class="nav-brand">
+                <span class="brand-icon">◆</span>
+                <span class="brand-text">Tometri</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="resume/resume.html" class="nav-link">Resume</a></li>
+            </ul>
+            <div class="nav-accent"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="code-line line-1"></div>
+            <div class="code-line line-2"></div>
+            <div class="code-line line-3"></div>
+            <div class="code-line line-4"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-ps">PowerShell</span>
+                <span class="title-sep">×</span>
+                <span class="title-py">Python</span>
+            </h1>
+            <h2 class="hero-subtitle">Developer & IT Professional</h2>
+            <p class="hero-description">
+                Building robust automation, exploring cybersecurity, and documenting the journey from IT novice to skilled professional
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-value">5+</div>
+                    <div class="stat-label">Courses Completed</div>
+                </div>
+                <div class="stat-separator"></div>
+                <div class="stat-item">
+                    <div class="stat-value">20+</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+                <div class="stat-separator"></div>
+                <div class="stat-item">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Committed</div>
+                </div>
+            </div>
+
+            <a href="#work" class="hero-cta">View My Work</a>
         </div>
     </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <div class="header-underline"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    I'm a dedicated IT professional transitioning into cybersecurity with a passion for automation and scripting. 
+                    Currently pursuing advanced certifications while completing coursework at Mississippi Gulf Coast Community College.
+                </p>
+                <p>
+                    My journey spans from foundational IT concepts to specialized areas including Linux administration, digital forensics, 
+                    and IT project management. I leverage PowerShell and Python to solve real-world problems and streamline workflows.
+                </p>
+                <p>
+                    Beyond the code and command line, I'm committed to continuous learning, documenting my projects, and building 
+                    a strong foundation in cybersecurity principles and practices.
+                </p>
+            </div>
+            <div class="tech-stack">
+                <h3>Primary Tech Stack</h3>
+                <div class="tech-badges">
+                    <span class="badge badge-ps">PowerShell</span>
+                    <span class="badge badge-py">Python</span>
+                    <span class="badge badge-other">Linux</span>
+                    <span class="badge badge-other">Windows</span>
+                    <span class="badge badge-other">Bash</span>
+                    <span class="badge badge-other">Git</span>
+                    <span class="badge badge-other">Active Directory</span>
+                    <span class="badge badge-other">Networking</span>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="section-header">
+            <h2>Technical Skills</h2>
+            <div class="header-underline"></div>
+        </div>
+        <div class="skills-grid">
+            <!-- PowerShell Skills -->
+            <div class="skill-category">
+                <div class="skill-icon ps-icon">PS</div>
+                <h3>PowerShell Automation</h3>
+                <ul class="skill-list">
+                    <li>Active Directory Management</li>
+                    <li>System Administration</li>
+                    <li>Script Development</li>
+                    <li>Windows Automation</li>
+                </ul>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 85%"></div>
+                </div>
+            </div>
+
+            <!-- Python Skills -->
+            <div class="skill-category">
+                <div class="skill-icon py-icon">PY</div>
+                <h3>Python Development</h3>
+                <ul class="skill-list">
+                    <li>Object-Oriented Programming</li>
+                    <li>Data Processing</li>
+                    <li>Utility Development</li>
+                    <li>Cross-Platform Scripts</li>
+                </ul>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 75%"></div>
+                </div>
+            </div>
+
+            <!-- Linux/System Skills -->
+            <div class="skill-category">
+                <div class="skill-icon other-icon">LX</div>
+                <h3>Linux & System Admin</h3>
+                <ul class="skill-list">
+                    <li>Linux Command Line</li>
+                    <li>Filesystem Management</li>
+                    <li>User & Permissions</li>
+                    <li>Advanced Administration</li>
+                </ul>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 80%"></div>
+                </div>
+            </div>
+
+            <!-- Security Skills -->
+            <div class="skill-category">
+                <div class="skill-icon other-icon">SEC</div>
+                <h3>Cybersecurity</h3>
+                <ul class="skill-list">
+                    <li>Digital Forensics</li>
+                    <li>Security Principles</li>
+                    <li>Threat Analysis</li>
+                    <li>Incident Response</li>
+                </ul>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 70%"></div>
+                </div>
+            </div>
+
+            <!-- Networking Skills -->
+            <div class="skill-category">
+                <div class="skill-icon other-icon">NET</div>
+                <h3>Networking</h3>
+                <ul class="skill-list">
+                    <li>TCP/IP Fundamentals</li>
+                    <li>Network Configuration</li>
+                    <li>Troubleshooting</li>
+                    <li>Network Security</li>
+                </ul>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 72%"></div>
+                </div>
+            </div>
+
+            <!-- Tools & Platforms -->
+            <div class="skill-category">
+                <div class="skill-icon other-icon">TOOLS</div>
+                <h3>Tools & Platforms</h3>
+                <ul class="skill-list">
+                    <li>Git & Version Control</li>
+                    <li>Virtual Environments</li>
+                    <li>Forensic Tools</li>
+                    <li>System Monitoring</li>
+                </ul>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="width: 78%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="section" id="work">
+        <div class="section-header">
+            <h2>Featured Work</h2>
+            <div class="header-underline"></div>
+        </div>
+
+        <!-- School Work -->
+        <div class="work-subsection">
+            <h3 class="subsection-title">Academic Projects (MGCCC - Spring 2026)</h3>
+            <div class="work-grid">
+                <div class="work-card">
+                    <span class="card-badge ps-badge">PowerShell</span>
+                    <h4>IST2263: Advanced Linux Administration</h4>
+                    <p class="card-description">
+                        Comprehensive Linux administration coursework covering command-line mastery, filesystem management, permissions, 
+                        user administration, and advanced system configuration techniques.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Linux</span>
+                        <span class="tag">Administration</span>
+                        <span class="tag">Bash</span>
+                    </div>
+                    <a href="school/MGCCC-Spring2026/IST2263-AdvAdminLinux/README.odt" class="card-link">View Project →</a>
+                </div>
+
+                <div class="work-card">
+                    <span class="card-badge py-badge">Python</span>
+                    <h4>IST1613: Computer Forensics</h4>
+                    <p class="card-description">
+                        Digital forensics investigation techniques, evidence collection, analysis workflows, and forensic reporting. 
+                        Practical application of forensic principles and tools.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Forensics</span>
+                        <span class="tag">Investigation</span>
+                        <span class="tag">Security</span>
+                    </div>
+                    <a href="school/MGCCC-Spring2026/IST1613-CompForensics/README.txt" class="card-link">View Project →</a>
+                </div>
+
+                <div class="work-card">
+                    <span class="card-badge ps-badge">PowerShell</span>
+                    <h4>IST2533: IT Project Management</h4>
+                    <p class="card-description">
+                        Project planning, execution, and management within IT environments. Documentation standards, team coordination, 
+                        and technical project oversight.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Management</span>
+                        <span class="tag">Planning</span>
+                        <span class="tag">Documentation</span>
+                    </div>
+                    <a href="school/MGCCC-Spring2026/IST2533-ITProjectManagement/README.odt" class="card-link">View Project →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Self-Study Projects -->
+        <div class="work-subsection">
+            <h3 class="subsection-title">Self-Study Projects</h3>
+            <div class="work-grid">
+                <div class="work-card">
+                    <span class="card-badge py-badge">Python</span>
+                    <h4>Bill Split Calculator</h4>
+                    <p class="card-description">
+                        A practical Python utility for calculating fair bill splits among friends. Features include tip calculation, 
+                        currency formatting, and interactive user prompts.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Utility</span>
+                        <span class="tag">Finance</span>
+                    </div>
+                    <a href="self-study/scripting/bill-split-calculator.py" class="card-link">View Project →</a>
+                </div>
+
+                <div class="work-card">
+                    <span class="card-badge ps-badge">PowerShell</span>
+                    <h4>System Automation Scripts</h4>
+                    <p class="card-description">
+                        Collection of PowerShell scripts for Windows system administration, user management, and routine maintenance tasks. 
+                        Production-ready automation solutions.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">PowerShell</span>
+                        <span class="tag">Automation</span>
+                        <span class="tag">Admin</span>
+                    </div>
+                    <a href="self-study/" class="card-link">View Scripts →</a>
+                </div>
+
+                <div class="work-card">
+                    <span class="card-badge py-badge">Python</span>
+                    <h4>Portfolio Repository</h4>
+                    <p class="card-description">
+                        This portfolio itself! A well-organized repository documenting coursework, labs, and self-study projects. 
+                        Demonstrates organization, documentation best practices, and version control skills.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Documentation</span>
+                        <span class="tag">Portfolio</span>
+                        <span class="tag">Organization</span>
+                    </div>
+                    <a href="https://github.com/Tometri/ProjectPortfolio" class="card-link">View Repository →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Composition Section -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Language Composition</h2>
+            <div class="header-underline"></div>
+        </div>
+        <div class="composition-container">
+            <div class="chart-bar">
+                <div class="chart-segment ps-segment" style="width: 67.1%">
+                    <span class="segment-label">PowerShell 67.1%</span>
+                </div>
+                <div class="chart-segment py-segment" style="width: 32.9%">
+                    <span class="segment-label">Python 32.9%</span>
+                </div>
+            </div>
+            <div class="composition-text">
+                <p>
+                    My technical skillset is built primarily on PowerShell for Windows automation and system administration, 
+                    complemented by Python for cross-platform scripting and data processing. This combination provides flexibility 
+                    in tackling diverse IT challenges across different platforms.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <div class="header-underline"></div>
+        </div>
+        <div class="contact-content">
+            <p>
+                I'm always interested in discussing IT projects, cybersecurity topics, and career opportunities. 
+                Feel free to reach out through any of the channels below.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:tometri@example.com" class="contact-link primary">
+                    <span class="link-icon">✉</span>
+                    <span>Send an Email</span>
+                </a>
+                <a href="https://github.com/Tometri" class="contact-link secondary">
+                    <span class="link-icon">⚙</span>
+                    <span>GitHub Profile</span>
+                </a>
+                <a href="https://linkedin.com/in/tometri" class="contact-link secondary">
+                    <span class="link-icon">💼</span>
+                    <span>LinkedIn Profile</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 Tometri | IT & Cybersecurity Professional</p>
+            <p class="footer-credit">Designed & Built with HTML, CSS & JavaScript | Hosted on GitHub Pages</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
     <footer>
         <p>&copy; 2026 Tometri. All rights reserved.</p>
     </footer>
