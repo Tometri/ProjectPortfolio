@@ -1,62 +1,142 @@
-<!DOCTYPE html>
+`    1<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta name="description" content="Professional Portfolio - IT & Cybersecurity">
+    <title>Tometri's Professional Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#about">About Me</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#coursework">Coursework</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#github">GitHub</a></li>
             </ul>
         </nav>
     </header>
 
+    <section id="hero" class="hero">
+        <h1>Tometri's Professional Portfolio</h1>
+        <p class="tagline">IT Professional & Cybersecurity Enthusiast</p>
+        <p class="subtitle">Academic coursework, labs, and self-study projects</p>
+        <a href="#about" class="cta-button">Explore My Work</a>
+    </section>
+
     <section id="about">
-        <h1>Welcome to My Portfolio</h1>
-        <p>This is a showcase of my professional journey, including my coursework and self-study projects.</p>
+        <h2>About Me</h2>
+        <p>I'm a dedicated IT professional pursuing formal education through Mississippi Gulf Coast Community College. My focus is on system administration, network security, and digital forensics.</p>
+        <p>This portfolio showcases my academic coursework, practical labs, and self-directed learning projects.</p>
     </section>
 
     <section id="coursework">
-        <h2>Real Coursework</h2>
-        <ul>
-            <li>IST2263 - Advanced Programming</li>
-            <li>IST1613 - Database Systems</li>
-            <li>IST2533 - Web Development</li>
-            <li>CSC1123 - Introduction to Computer Science</li>
-            <li>BIO1134 - Biology for Non-Majors</li>
-        </ul>
+        <h2>Academic Coursework - MGCCC Spring 2026</h2>
+        <div class="courses-container">
+            <div class="course-card">
+                <h3>IST2263</h3>
+                <p class="course-name">Advanced Linux Administration</p>
+                <p>Linux system administration, command-line expertise, and file system management.</p>
+                <a href="https://github.com/Tometri/ProjectPortfolio/tree/main/school/MGCCC-Spring2026/IST2263-AdvAdminLinux" class="card-link">View →</a>
+            </div>
+            <div class="course-card">
+                <h3>IST1613</h3>
+                <p class="course-name">Computer Forensics</p>
+                <p>Digital forensics workflows, evidence handling, and incident investigation.</p>
+                <a href="https://github.com/Tometri/ProjectPortfolio/tree/main/school/MGCCC-Spring2026/IST1613-CompForensics" class="card-link">View →</a>
+            </div>
+            <div class="course-card">
+                <h3>IST2533</h3>
+                <p class="course-name">IT Project Management</p>
+                <p>Project planning, documentation, and professional IT project delivery.</p>
+                <a href="https://github.com/Tometri/ProjectPortfolio/tree/main/school/MGCCC-Spring2026/IST2533-ITProjectManagement" class="card-link">View →</a>
+            </div>
+            <div class="course-card">
+                <h3>CSC1123</h3>
+                <p class="course-name">Computer Applications</p>
+                <p>Core computer literacy and foundational IT concepts.</p>
+                <a href="https://github.com/Tometri/ProjectPortfolio/tree/main/school/MGCCC-Spring2026/CSC1123-ComputerApplications" class="card-link">View →</a>
+            </div>
+            <div class="course-card">
+                <h3>BIO1134</h3>
+                <p class="course-name">Biology</p>
+                <p>General biology coursework.</p>
+                <a href="https://github.com/Tometri/ProjectPortfolio/tree/main/school/MGCCC-Spring2026/BIO1134-Biology" class="card-link">View →</a>
+            </div>
+        </div>
     </section>
 
     <section id="projects">
         <h2>Self-Study Projects</h2>
-        <p>Below are some self-initiated projects I have worked on:</p>
-        <ul>
-            <li>Project A: A web application for task management.</li>
-            <li>Project B: A data visualization tool using Python.</li>
-        </ul>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Bill Split Calculator</h3>
+                <p class="tech">Python</p>
+                <p>Practical application for calculating bill splits among multiple parties.</p>
+                <a href="https://github.com/Tometri/ProjectPortfolio/blob/main/self-study/BillSplitCalculator" class="card-link">View →</a>
+            </div>
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p class="tech">HTML • CSS • GitHub Pages</p>
+                <p>This responsive portfolio website built with HTML, CSS, and deployed via GitHub Pages.</p>
+                <a href="https://github.com/Tometri/ProjectPortfolio" class="card-link">View →</a>
+            </div>
+        </div>
     </section>
 
     <section id="skills">
-        <h2>Skills</h2>
-        <p>My technical skills include:</p>
-        <ul>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>HTML/CSS</li>
-            <li>SQL</li>
-        </ul>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-box">
+                <h3>Operating Systems</h3>
+                <ul>
+                    <li>Linux Administration</li>
+                    <li>Windows Systems</li>
+                    <li>Ubuntu Lab Environments</li>
+                </ul>
+            </div>
+            <div class="skill-box">
+                <h3>Security & Forensics</h3>
+                <ul>
+                    <li>Digital Forensics</li>
+                    <li>Evidence Handling</li>
+                    <li>Incident Investigation</li>
+                </ul>
+            </div>
+            <div class="skill-box">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>System Administration</li>
+                    <li>File System Management</li>
+                    <li>Python Programming</li>
+                </ul>
+            </div>
+            <div class="skill-box">
+                <h3>Tools & Technologies</h3>
+                <ul>
+                    <li>Git & GitHub</li>
+                    <li>Command-line Tools</li>
+                    <li>Lab Virtualization</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="github" class="cta-section">
+        <h2>Explore My Work</h2>
+        <p>Visit my GitHub repository to see all projects, coursework, and documentation.</p>
+        <a href="https://github.com/Tometri/ProjectPortfolio" class="primary-btn" target="_blank">Visit GitHub Repository</a>
     </section>
 
     <footer>
-        <p>Contact: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <p>&copy; 2026 Tometri. All rights reserved.</p>
+        <p><a href="https://github.com/Tometri" target="_blank">GitHub Profile</a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
