@@ -1,49 +1,43 @@
-# ProjectPortfolio
+# Tometri's Professional Portfolio
 
-Technical portfolio documenting coursework, labs, and self-study as I transition into IT and cybersecurity.
+Welcome to my professional portfolio showcasing my work as an IT professional and cybersecurity enthusiast.
 
-## Quick Navigation
+## 🌐 Live Portfolio
+Visit my portfolio: **[https://tometri.github.io/ProjectPortfolio/](https://tometri.github.io/ProjectPortfolio/)**
 
-- [Repository Index](docs/index.md)
-- [Structure Roadmap](docs/portfolio-roadmap.md)
-- [Naming Conventions](docs/naming-conventions.md)
-- [School Work](school/README.md)
-- [Self-Study](self-study/README.md)
-- [Labs](labs/README.md)
-- [Resume](resume/README.md)
+## 📊 Repository Composition
+- **PowerShell**: 67% - System administration and automation scripts
+- **Python**: 33% - Cross-platform development and utilities
 
-## Current Repository Layout
+## 📚 Contents
 
-- `school/MGCCC-Spring2026/`
-  - Course folders with assignments, notes, screenshots, and submissions.
-- `self-study/`
-  - Topic-based folders (`cloud`, `linux`, `networking`, `scripting`, `security`).
-- `labs/`
-  - Standalone lab work and artifacts.
-- `resume/`
-  - Resume versions and related documents.
-- `docs/`
-  - Repository organization, indexes, and standards.
-- `scripts/`
-  - Utility scripts for repository maintenance.
+### Academic Coursework (MGCCC Spring 2026)
+- **IST2263** - Advanced Linux Administration
+- **IST1613** - Computer Forensics  
+- **IST2533** - IT Project Management
+- **CSC1123** - Computer Applications
 
-## Highlighted Work (Current Paths)
+### Self-Study Projects
+- **Bill Split Calculator** - Python utility for calculating shared expenses
+- **Portfolio Website** - This responsive website built with HTML, CSS, and deployed via GitHub Pages
 
-- [IST2263 - Advanced Admin Linux](school/MGCCC-Spring2026/IST2263-AdvAdminLinux/README.odt)
-- [IST1613 - Computer Forensics](school/MGCCC-Spring2026/IST1613-CompForensics/README.txt)
-- [IST2533 - IT Project Management](school/MGCCC-Spring2026/IST2533-ITProjectManagement/README.odt)
-- [Bill Split Calculator (Python)](self-study/scripting/bill-split-calculator.py)
+### Featured Areas
+- `school/` - Formal coursework and assignments
+- `self-study/` - Self-directed learning projects
+- `labs/` - Hands-on lab exercises
+- `resume/` - Resume documentation
 
-## Skills Demonstrated
+## 🛠️ Technical Skills
+- **PowerShell** - System administration, Active Directory, Windows Server
+- **Python** - Cross-platform development, scripting, automation
+- **Linux** - Advanced administration and command-line expertise
+- **Security & Forensics** - Digital forensics, incident investigation
+- **Project Management** - Documentation, planning, IT delivery
 
-- Linux command line and administration
-- Filesystem and permissions management
-- Basic digital forensics workflows
-- Project and technical documentation
-- Windows and Ubuntu lab environments
+## 📖 Quick Links
+- [GitHub Profile](https://github.com/Tometri)
+- [Live Portfolio](https://tometri.github.io/ProjectPortfolio/)
+- [Repository](https://github.com/Tometri/ProjectPortfolio)
 
-## Next Cleanup Targets
-
-- Normalize folder names to `kebab-case` over time.
-- Add Markdown `README.md` files beside major binary submissions.
-- Expand `labs/` with standalone reproducible labs.
+---
+*Built with HTML, CSS, and JavaScript | Portfolio deployed via GitHub Pages*
