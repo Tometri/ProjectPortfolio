@@ -1,0 +1,71 @@
+# =============================================================================
+# .editorconfig — Unified coding standards for the ProjectPortfolio repository
+# =============================================================================
+# EditorConfig helps maintain consistent coding styles across different editors
+# and IDEs. See https://editorconfig.org for details.
+#
+# Standard: All text files use UTF-8, LF line endings, 4-space indentation,
+# with trailing whitespace trimmed and a final newline inserted.
+# =============================================================================
+
+# Top-most EditorConfig file — stop searching parent directories
+root = true
+
+# --------------------------------------------------------------------------
+# Default settings for ALL files
+# --------------------------------------------------------------------------
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# --------------------------------------------------------------------------
+# Markdown — preserve trailing whitespace (two spaces = <br> in Markdown)
+# --------------------------------------------------------------------------
+[*.md]
+trim_trailing_whitespace = false
+
+# --------------------------------------------------------------------------
+# YAML / TOML — 2-space indent is standard for config files
+# --------------------------------------------------------------------------
+[*.{yml,yaml,toml}]
+indent_size = 2
+
+# --------------------------------------------------------------------------
+# HTML / CSS / JavaScript — 4-space indent for readability
+# --------------------------------------------------------------------------
+[*.{html,css,js}]
+indent_size = 4
+
+# --------------------------------------------------------------------------
+# Python — 4-space indent per PEP 8
+# --------------------------------------------------------------------------
+[*.py]
+indent_size = 4
+
+# --------------------------------------------------------------------------
+# Shell scripts — 4-space indent
+# --------------------------------------------------------------------------
+[*.sh]
+indent_size = 4
+
+# --------------------------------------------------------------------------
+# Makefile — MUST use tabs (Make syntax requirement)
+# --------------------------------------------------------------------------
+[Makefile]
+indent_style = tab
+
+# --------------------------------------------------------------------------
+# JSON — 2-space indent for readability
+# --------------------------------------------------------------------------
+[*.json]
+indent_size = 2
+
+# --------------------------------------------------------------------------
+# XML — 2-space indent
+# --------------------------------------------------------------------------
+[*.xml]
+indent_size = 2
