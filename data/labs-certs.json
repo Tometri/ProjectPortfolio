@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-14T23:26:37.174216",
+  "generated_at": "2026-04-14T23:29:14.269093",
   "labs": [
     {
       "id": 2,
@@ -12,8 +12,8 @@
       "difficulty": "beginner",
       "notes": "Demonstrates declarative agent configuration using YAML",
       "verification_link": "",
-      "created_at": "2026-04-14 23:26:25",
-      "updated_at": "2026-04-14 23:26:25"
+      "created_at": "2026-04-14 23:29:14",
+      "updated_at": "2026-04-14 23:29:14"
     },
     {
       "id": 1,
@@ -26,8 +26,8 @@
       "difficulty": "intermediate",
       "notes": "Uses Gemini 2.5 Flash model for code generation and review",
       "verification_link": "",
-      "created_at": "2026-04-14 23:26:25",
-      "updated_at": "2026-04-14 23:26:25"
+      "created_at": "2026-04-14 23:29:14",
+      "updated_at": "2026-04-14 23:29:14"
     },
     {
       "id": 4,
@@ -40,8 +40,8 @@
       "difficulty": "intermediate",
       "notes": "Includes metadata analysis and OSINT practice",
       "verification_link": "",
-      "created_at": "2026-04-14 23:26:25",
-      "updated_at": "2026-04-14 23:26:25"
+      "created_at": "2026-04-14 23:29:14",
+      "updated_at": "2026-04-14 23:29:14"
     },
     {
       "id": 3,
@@ -54,8 +54,8 @@
       "difficulty": "intermediate",
       "notes": "Part of IST2263 coursework at MGCCC",
       "verification_link": "",
-      "created_at": "2026-04-14 23:26:25",
-      "updated_at": "2026-04-14 23:26:25"
+      "created_at": "2026-04-14 23:29:14",
+      "updated_at": "2026-04-14 23:29:14"
     }
   ],
   "certifications": [
@@ -68,8 +68,8 @@
       "credential_id": "AZ-900",
       "verification_link": "",
       "notes": "Core Azure services, identity, networking, security basics",
-      "created_at": "2026-04-14 23:26:25",
-      "updated_at": "2026-04-14 23:26:25"
+      "created_at": "2026-04-14 23:29:14",
+      "updated_at": "2026-04-14 23:29:14"
     },
     {
       "id": 2,
@@ -80,8 +80,8 @@
       "credential_id": "",
       "verification_link": "",
       "notes": "In progress \u2014 cybersecurity fundamentals certification",
-      "created_at": "2026-04-14 23:26:25",
-      "updated_at": "2026-04-14 23:26:25"
+      "created_at": "2026-04-14 23:29:14",
+      "updated_at": "2026-04-14 23:29:14"
     },
     {
       "id": 3,
@@ -92,8 +92,8 @@
       "credential_id": "",
       "verification_link": "",
       "notes": "In progress \u2014 entry-level cybersecurity certification",
-      "created_at": "2026-04-14 23:26:25",
-      "updated_at": "2026-04-14 23:26:25"
+      "created_at": "2026-04-14 23:29:14",
+      "updated_at": "2026-04-14 23:29:14"
     }
   ]
 }

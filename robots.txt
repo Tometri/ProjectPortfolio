@@ -1,4 +1,16 @@
 User-agent: *
+
+
+
 Allow: /
 
+
+
+
+
+
+
 Sitemap: https://tometri.github.io/ProjectPortfolio/sitemap.xml
+
+
+
