@@ -1,1440 +1,314 @@
 # =============================================================================
-
-
-
 # STARSHIP.TOML — Universal Information-Dense Retro Terminal Config
-
-
-
 # Author: Tree (Tristen Weaver)
-
-
-
 # =============================================================================
-
-
-
 #
-
-
-
 # ESCAPING RULES — learned the hard way:
-
-
-
 #
-
-
-
 # Starship parses [ ] $ ( ) as syntax in EVERY string value it reads,
-
-
-
 # whether it's a format = '...', a symbol = '...', or any other field.
-
-
-
 # [ starts a "text group" and MUST be followed by ](style) — otherwise ERROR.
-
-
-
 #
-
-
-
 # To print a literal [ or ] in output, escape as \[ and \].
-
-
-
 #
-
-
-
 # TOML string type determines whether \ reaches Starship:
-
-
-
 #   '...' or '''...'''  = literal string: backslash is NOT special to TOML,
-
-
-
 #                         passes through to Starship intact.  USE THESE.
-
-
-
 #   "..." or """..."""  = basic string:   backslash IS special to TOML,
-
-
-
 #                         so \[ is an invalid TOML escape = FILE REJECTED.
-
-
-
 #
-
-
-
 # Rule: use ''' for the multi-line format block.
-
-
-
 #       use ' for every other string in this file.
-
-
-
 #       Never use " or """ anywhere.
-
-
-
 #
-
-
-
 # PATTERN REFERENCE:
-
-
-
 #   Wrap output in literal brackets:   format = '\[text $var\]($style)'
-
-
-
 #   Styled variable (no outer bracket): format = '[$var]($style)'
-
-
-
 #   symbol/label fields are plain text: symbol = 'LABEL'  (no brackets needed)
-
-
-
 #   success_symbol is plain text too:   success_symbol = 'OK'
-
-
-
 #   Bracket it via the format string:   format = '\[$symbol\]($style)'
-
-
-
 # =============================================================================
-
-
-
-
-
-
-
 add_newline = true
-
-
-
 command_timeout = 1000
-
-
-
 palette = 'retro_green'
-
-
-
-
-
-
-
 # Use ''' (literal multiline) so \[ passes to Starship, not consumed by TOML
-
-
-
 format = '''
-
-
-
 [╔══\[SYS\]══════════════════════════════════════════════════════════════](bold dimmed green)
-
-
-
 $os$username$hostname$battery$memory_usage$custom$time
-
-
-
 [╠══\[ENV\]══════════════════════════════════════════════════════════════](bold dimmed green)
-
-
-
 $directory$git_branch$git_commit$git_state$git_status$git_metrics
-
-
-
 [╠══\[CTX\]══════════════════════════════════════════════════════════════](bold dimmed green)
-
-
-
 $python$nodejs$rust$golang$java$php$ruby$docker_context$conda$terraform$kubernetes
-
-
-
 [╠══\[CMD\]══════════════════════════════════════════════════════════════](bold dimmed green)
-
-
-
 $sudo$jobs$status$cmd_duration
-
-
-
 [╚══\[>>\]](bold dimmed green) $character'''
-
-
-
-
-
-
-
 right_format = '''$localip$shlvl'''
-
-
-
-
-
-
-
 # =============================================================================
-
-
-
 # COLOR PALETTE
-
-
-
 # =============================================================================
-
-
-
-
-
-
-
 [palettes.retro_green]
-
-
-
 bright    = '#00FF41'
-
-
-
 dim       = '#007A1F'
-
-
-
 warn      = '#FFD700'
-
-
-
 danger    = '#FF3131'
-
-
-
 ok        = '#39FF14'
-
-
-
 neutral   = '#AAAAAA'
-
-
-
 muted     = '#555555'
-
-
-
 accent    = '#00FFFF'
-
-
-
 highlight = '#FF8C00'
-
-
-
-
-
-
-
 # =============================================================================
-
-
-
 # SYS ROW — OS / User / Host / Battery / Memory / CPU / Time
-
-
-
 # =============================================================================
-
-
-
-
-
-
-
 [os]
-
-
-
 format = ' \[[$symbol]($style)\]'
-
-
-
 style = 'bold bright'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [os.symbols]
-
-
-
 # Plain text — no brackets. The [os] format wraps them in a text group.
-
-
-
 Alpine   = 'alpine'
-
-
-
 Arch     = 'arch'
-
-
-
 Debian   = 'deb'
-
-
-
 Fedora   = 'fed'
-
-
-
 Linux    = 'linux'
-
-
-
 Macos    = 'osx'
-
-
-
 Manjaro  = 'manjaro'
-
-
-
 Mint     = 'mint'
-
-
-
 NixOS    = 'nix'
-
-
-
 Raspbian = 'pi'
-
-
-
 Ubuntu   = 'ubuntu'
-
-
-
 Windows  = 'win'
-
-
-
 Unknown  = '???'
-
-
-
-
-
-
-
 [username]
-
-
-
 format = ' [<$user>]($style)'
-
-
-
 style_user = 'bold bright'
-
-
-
 style_root = 'bold danger blink'
-
-
-
 show_always = true
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [hostname]
-
-
-
 format = '[@$hostname]($style)'
-
-
-
 style = 'bold accent'
-
-
-
 ssh_only = false
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [battery]
-
-
-
 # \[ \] are literal brackets in output. [$symbol$percentage] is the text group.
-
-
-
 format = ' \[[$symbol$percentage]($style)\]'
-
-
-
 # symbol fields are plain text inserted into $symbol — no brackets here
-
-
-
 full_symbol        = '= '
-
-
-
 charging_symbol    = 'CHG '
-
-
-
 discharging_symbol = 'BAT '
-
-
-
 unknown_symbol     = 'BAT? '
-
-
-
 empty_symbol       = '!!! '
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [[battery.display]]
-
-
-
 threshold = 10
-
-
-
 style = 'bold danger blink'
-
-
-
-
-
-
-
 [[battery.display]]
-
-
-
 threshold = 25
-
-
-
 style = 'bold danger'
-
-
-
-
-
-
-
 [[battery.display]]
-
-
-
 threshold = 50
-
-
-
 style = 'bold warn'
-
-
-
-
-
-
-
 [[battery.display]]
-
-
-
 threshold = 100
-
-
-
 style = 'bold ok'
-
-
-
-
-
-
-
 [memory_usage]
-
-
-
 format = ' \[MEM:[$ram_pct]($style)\]'
-
-
-
 style = 'bold bright'
-
-
-
 threshold = 0
-
-
-
 disabled = false
-
-
-
-
-
-
-
 # CPU via custom module — reads /proc/stat, no starship version dependency
-
-
-
 [custom.cpu]
-
-
-
 format = ' \[CPU:[$output]($style)\]'
-
-
-
 style = 'bold bright'
-
-
-
 command = "awk '/^cpu / {u=$2+$4; t=$2+$3+$4+$5+$6+$7+$8; if(t>0) printf \"%d%%\", u*100/t}' /proc/stat"
-
-
-
 when = 'test -f /proc/stat'
-
-
-
 shell = ['bash', '--noprofile', '--norc']
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [time]
-
-
-
 format = ' \[[$time]($style)\]'
-
-
-
 time_format = '%Y-%m-%d %H:%M:%S'
-
-
-
 style = 'bold dimmed bright'
-
-
-
 disabled = false
-
-
-
 use_12hr = false
-
-
-
-
-
-
-
 # =============================================================================
-
-
-
 # ENV ROW — Directory / Git
-
-
-
 # =============================================================================
-
-
-
-
-
-
-
 [directory]
-
-
-
 format = '[$path]($style)[$read_only]($read_only_style)'
-
-
-
 style = 'bold accent'
-
-
-
 read_only = ' \[RO\]'
-
-
-
 read_only_style = 'bold danger'
-
-
-
 truncation_length = 6
-
-
-
 truncate_to_repo = true
-
-
-
 home_symbol = '~'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [git_branch]
-
-
-
 format = ' \[git:[$symbol$branch]($style)\]'
-
-
-
 # symbol is plain text — no brackets
-
-
-
 symbol = ''
-
-
-
 style = 'bold warn'
-
-
-
 truncation_length = 28
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [git_commit]
-
-
-
 format = ' \[[#$hash$tag]($style)\]'
-
-
-
 style = 'bold dimmed warn'
-
-
-
 commit_hash_length = 7
-
-
-
 # tag_symbol is plain text
-
-
-
 tag_symbol = ' tag:'
-
-
-
 only_detached = false
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [git_state]
-
-
-
 format = ' \[[$state( $progress_current/$progress_total)]($style)\]'
-
-
-
 style = 'bold danger'
-
-
-
 # These are plain text substituted into $state
-
-
-
 rebase       = 'REBASE'
-
-
-
 merge        = 'MERGE'
-
-
-
 revert       = 'REVERT'
-
-
-
 cherry_pick  = 'CHERRY'
-
-
-
 bisect       = 'BISECT'
-
-
-
 am           = 'AM'
-
-
-
 am_or_rebase = 'AM/REBASE'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [git_status]
-
-
-
 # $all_status expands using the per-status strings below (plain text)
-
-
-
 format = ' \[[$all_status$ahead_behind]($style)\]'
-
-
-
 style = 'bold warn'
-
-
-
 conflicted = 'CONFLICT:$count '
-
-
-
 ahead      = 'AHEAD:$count '
-
-
-
 behind     = 'BEHIND:$count '
-
-
-
 diverged   = 'DIVG:+$ahead_count/-$behind_count '
-
-
-
 up_to_date = 'CLEAN'
-
-
-
 untracked  = 'NEW:$count '
-
-
-
 stashed    = 'STASH:$count '
-
-
-
 modified   = 'MOD:$count '
-
-
-
 staged     = 'STAGED:$count '
-
-
-
 renamed    = 'REN:$count '
-
-
-
 deleted    = 'DEL:$count '
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [git_metrics]
-
-
-
 format = ' \[[+$added]($added_style)/[-$deleted]($deleted_style)\]'
-
-
-
 added_style = 'bold ok'
-
-
-
 deleted_style = 'bold danger'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 # =============================================================================
-
-
-
 # CTX ROW — Language & Tool Environments
-
-
-
 # =============================================================================
-
-
-
-
-
-
-
 [python]
-
-
-
 format = ' \[py:[$version($virtualenv)]($style)\]'
-
-
-
 style = 'bold highlight'
-
-
-
 symbol = ''
-
-
-
 version_format = '${raw}'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [nodejs]
-
-
-
 format = ' \[node:[$version]($style)\]'
-
-
-
 style = 'bold ok'
-
-
-
 version_format = '${raw}'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [rust]
-
-
-
 format = ' \[rust:[$version]($style)\]'
-
-
-
 style = 'bold danger'
-
-
-
 version_format = '${raw}'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [golang]
-
-
-
 format = ' \[go:[$version]($style)\]'
-
-
-
 style = 'bold accent'
-
-
-
 version_format = '${raw}'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [java]
-
-
-
 format = ' \[java:[$version]($style)\]'
-
-
-
 style = 'bold warn'
-
-
-
 version_format = '${raw}'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [php]
-
-
-
 format = ' \[php:[$version]($style)\]'
-
-
-
 style = 'bold dimmed accent'
-
-
-
 version_format = '${raw}'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [ruby]
-
-
-
 format = ' \[ruby:[$version]($style)\]'
-
-
-
 style = 'bold danger'
-
-
-
 version_format = '${raw}'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [docker_context]
-
-
-
 format = ' \[docker:[$context]($style)\]'
-
-
-
 style = 'bold accent'
-
-
-
 only_with_files = false
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [conda]
-
-
-
 format = ' \[conda:[$environment]($style)\]'
-
-
-
 style = 'bold ok'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [terraform]
-
-
-
 format = ' \[tf:[$version $workspace]($style)\]'
-
-
-
 style = 'bold highlight'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [kubernetes]
-
-
-
 format = ' \[k8s:[$context $namespace]($style)\]'
-
-
-
 style = 'bold accent'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 # =============================================================================
-
-
-
 # CMD ROW — Sudo / Jobs / Status / Duration
-
-
-
 # =============================================================================
-
-
-
-
-
-
-
 [sudo]
-
-
-
 # No $symbol used — plain static label with literal brackets
-
-
-
 format = ' \[[SUDO ACTIVE]($style)\]'
-
-
-
 style = 'bold danger blink'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [jobs]
-
-
-
 format = ' \[[JOBS:$number]($style)\]'
-
-
-
 style = 'bold warn blink'
-
-
-
 symbol = ''
-
-
-
 number_threshold = 1
-
-
-
 symbol_threshold = 1
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [status]
-
-
-
 # success (exit=0): shows [OK] in ok-style
-
-
-
 # failure (exit!=0): shows [FAIL: NOTFOUND] or [FAIL: SIGINT] etc.
-
-
-
 # $status (the raw number) is intentionally omitted — $common_meaning is cleaner.
-
-
-
 format = ' \[[$symbol]($style)\]'
-
-
-
 success_symbol = 'OK'
-
-
-
 style = 'bold ok'
-
-
-
 symbol = 'FAIL'
-
-
-
 not_executable_symbol = 'NOEXEC'
-
-
-
 not_found_symbol = 'NOTFOUND'
-
-
-
 sigint_symbol = 'SIGINT'
-
-
-
 signal_symbol = 'SIG'
-
-
-
 recognize_signal_code = true
-
-
-
 map_symbol = true
-
-
-
 pipestatus = true
-
-
-
 pipestatus_format = ' \[[$pipestatus](bold dimmed warn)\]'
-
-
-
 pipestatus_separator = '|'
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [cmd_duration]
-
-
-
 format = ' \[[TOOK:${duration}]($style)\]'
-
-
-
 style = 'bold dimmed warn'
-
-
-
 min_time = 500
-
-
-
 show_milliseconds = true
-
-
-
 min_time_to_notify = 30000
-
-
-
 disabled = false
-
-
-
-
-
-
-
 # =============================================================================
-
-
-
 # RIGHT PROMPT — IP / Shell depth
-
-
-
 # =============================================================================
-
-
-
-
-
-
-
 [localip]
-
-
-
 format = '$localipv4 '
-
-
-
 style = 'bold dimmed accent'
-
-
-
 ssh_only = false
-
-
-
 disabled = false
-
-
-
-
-
-
-
 [shlvl]
-
-
-
 format = '\[[LVL:$shlvl]($style)\] '
-
-
-
 style = 'bold dimmed muted'
-
-
-
 threshold = 2
-
-
-
 repeat = false
-
-
-
 disabled = false
-
-
-
-
-
-
-
 # =============================================================================
-
-
-
 # CHARACTER — Input cursor
-
-
-
 # =============================================================================
-
-
-
-
-
-
-
 [character]
-
-
-
 success_symbol = '[>_](bold ok)'
-
-
-
 error_symbol   = '[!>](bold danger)'
-
-
-
 vimcmd_symbol  = '[CMD](bold warn)'
-
-
-
 vimcmd_replace_one_symbol = '[R1](bold danger)'
-
-
-
 vimcmd_replace_symbol     = '[RR](bold danger)'
-
-
-
 vimcmd_visual_symbol      = '[VIS](bold accent)'
-
-
-
 disabled = false
-
-
 

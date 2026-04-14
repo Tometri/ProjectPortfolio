@@ -1,3680 +1,786 @@
 /* ============================================
-
-
-
    DESIGN SYSTEM - COHESIVE & INTEGRATED
-
-
-
    ============================================ */
-
-
-
-
-
-
-
 :root {
-
-
-
     /* Primary Colors */
-
-
-
     --ps-blue: #0078d4;
-
-
-
     --ps-light: #50e6ff;
-
-
-
     --py-yellow: #ffd43b;
-
-
-
     --py-blue: #366994;
 
-
-
     
-
-
-
     /* Base Colors */
-
-
-
     --bg-dark: #0d1117;
-
-
-
     --bg-darker: #010409;
-
-
-
     --bg-surface: #161b22;
-
-
-
     --bg-surface-light: #21262d;
 
-
-
     
-
-
-
     /* Text Colors */
-
-
-
     --text-primary: #c9d1d9;
-
-
-
     --text-secondary: #8b949e;
-
-
-
     --text-muted: #6e7681;
 
-
-
     
-
-
-
     /* Accents */
-
-
-
     --accent-1: #58a6ff;
-
-
-
     --accent-2: #79c0ff;
-
-
-
     --accent-3: #1f6feb;
 
-
-
     
-
-
-
     /* Shadows */
-
-
-
     --shadow-sm: 0 3px 12px rgba(0, 0, 0, 0.3);
-
-
-
     --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.4);
-
-
-
     --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.5);
 
-
-
     
-
-
-
     /* Transitions */
-
-
-
     --transition-fast: 0.2s ease;
-
-
-
     --transition-base: 0.3s ease;
-
-
-
     --transition-slow: 0.5s ease;
-
-
-
 }
-
-
-
-
-
-
-
 /* ============================================
-
-
-
    GLOBAL STYLES
-
-
-
    ============================================ */
-
-
-
-
-
-
-
 * {
-
-
-
     margin: 0;
-
-
-
     padding: 0;
-
-
-
     box-sizing: border-box;
-
-
-
 }
-
-
-
-
-
-
-
 html {
-
-
-
     scroll-behavior: smooth;
-
-
-
 }
-
-
-
-
-
-
-
 body {
-
-
-
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-
-
-
     background: var(--bg-dark);
-
-
-
     color: var(--text-primary);
-
-
-
     line-height: 1.6;
-
-
-
     overflow-x: hidden;
-
-
-
 }
-
-
-
-
-
-
-
 /* ============================================
-
-
-
    NAVIGATION BAR
-
-
-
    ============================================ */
-
-
-
-
-
-
-
 .navbar {
-
-
-
     position: fixed;
-
-
-
     top: 0;
-
-
-
     width: 100%;
-
-
-
     background: rgba(13, 17, 23, 0.95);
-
-
-
     backdrop-filter: blur(10px);
-
-
-
     border-bottom: 1px solid rgba(88, 166, 255, 0.1);
-
-
-
     z-index: 1000;
-
-
-
     box-shadow: var(--shadow-sm);
-
-
-
 }
-
-
-
-
-
-
-
 .nav-wrapper {
-
-
-
     max-width: 1200px;
-
-
-
     margin: 0 auto;
-
-
-
     padding: 0 2rem;
-
-
-
     display: flex;
-
-
-
     justify-content: space-between;
-
-
-
     align-items: center;
-
-
-
     height: 70px;
-
-
-
     position: relative;
-
-
-
 }
-
-
-
-
-
-
-
 .nav-brand {
-
-
-
     display: flex;
-
-
-
     align-items: center;
-
-
-
     gap: 0.8rem;
-
-
-
     font-size: 1.5rem;
-
-
-
     font-weight: 700;
-
-
-
     background: linear-gradient(135deg, var(--ps-blue), var(--py-yellow));
-
-
-
     -webkit-background-clip: text;
-
-
-
     -webkit-text-fill-color: transparent;
-
-
-
     background-clip: text;
-
-
-
 }
-
-
-
-
-
-
-
 .brand-icon {
-
-
-
     font-size: 1.8rem;
-
-
-
     color: var(--ps-light);
-
-
-
 }
-
-
-
-
-
-
-
 .nav-links {
-
-
-
     display: flex;
-
-
-
     list-style: none;
-
-
-
     gap: 2rem;
-
-
-
     align-items: center;
-
-
-
 }
-
-
-
-
-
-
-
 .nav-link {
-
-
-
     color: var(--text-primary);
-
-
-
     text-decoration: none;
-
-
-
     font-weight: 500;
-
-
-
     position: relative;
-
-
-
     transition: color var(--transition-fast);
-
-
-
     padding: 0.5rem 0;
-
-
-
 }
-
-
-
-
-
-
-
 .nav-link::after {
-
-
-
     content: '';
-
-
-
     position: absolute;
-
-
-
     bottom: 0;
-
-
-
     left: 0;
-
-
-
     width: 0;
-
-
-
     height: 2px;
-
-
-
     background: linear-gradient(90deg, var(--ps-blue), var(--py-yellow));
-
-
-
     transition: width var(--transition-base);
-
-
-
 }
-
-
-
-
-
-
-
 .nav-link:hover {
-
-
-
     color: var(--accent-1);
-
-
-
 }
-
-
-
-
-
-
-
 .nav-link:hover::after {
-
-
-
     width: 100%;
-
-
-
 }
-
-
-
-
-
-
-
 .nav-accent {
-
-
-
     position: absolute;
-
-
-
     bottom: 0;
-
-
-
     right: 0;
-
-
-
     width: 0;
-
-
-
     height: 3px;
-
-
-
     background: linear-gradient(90deg, transparent, var(--ps-blue), var(--py-yellow), transparent);
-
-
-
 }
-
-
-
-
-
-
-
 /* ============================================
-
-
-
    HERO SECTION
-
-
-
    ============================================ */
-
-
-
-
-
-
-
 .hero {
-
-
-
     position: relative;
-
-
-
     padding: 120px 2rem 80px;
-
-
-
     background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-surface) 100%);
-
-
-
     border-bottom: 1px solid rgba(88, 166, 255, 0.1);
-
-
-
     overflow: hidden;
-
-
-
     margin-top: 70px;
-
-
-
 }
-
-
-
-
-
-
-
 .hero-background {
-
-
-
     position: absolute;
-
-
-
     top: 0;
-
-
-
     left: 0;
-
-
-
     right: 0;
-
-
-
     bottom: 0;
-
-
-
     opacity: 0.1;
-
-
-
 }
-
-
-
-
-
-
-
 .code-line {
-
-
-
     position: absolute;
-
-
-
     background: var(--ps-light);
-
-
-
     opacity: 0.3;
-
-
-
 }
-
-
-
-
-
-
-
 .line-1 {
-
-
-
     width: 80%;
-
-
-
     height: 1px;
-
-
-
     top: 20%;
-
-
-
     left: 10%;
-
-
-
     animation: slideIn 2s ease-out 0.1s forwards;
-
-
-
 }
-
-
-
-
-
-
-
 .line-2 {
-
-
-
     width: 60%;
-
-
-
     height: 1px;
-
-
-
     top: 40%;
-
-
-
     right: 10%;
-
-
-
     animation: slideIn 2s ease-out 0.2s forwards;
-
-
-
 }
-
-
-
-
-
-
-
 .line-3 {
-
-
-
     width: 70%;
-
-
-
     height: 1px;
-
-
-
     top: 60%;
-
-
-
     left: 15%;
-
-
-
     animation: slideIn 2s ease-out 0.3s forwards;
-
-
-
 }
-
-
-
-
-
-
-
 .line-4 {
-
-
-
     width: 65%;
-
-
-
     height: 1px;
-
-
-
     top: 80%;
-
-
-
     right: 15%;
-
-
-
     animation: slideIn 2s ease-out 0.4s forwards;
-
-
-
 }
-
-
-
-
-
-
-
 @keyframes slideIn {
-
-
-
     from {
-
-
-
         width: 0;
-
-
-
         opacity: 0;
-
-
-
     }
-
-
-
     to {
-
-
-
         opacity: 0.3;
-
-
-
     }
-
-
-
 }
-
-
-
-
-
-
-
 .hero-content {
-
-
-
     position: relative;
-
-
-
     z-index: 1;
-
-
-
     max-width: 1000px;
-
-
-
     margin: 0 auto;
-
-
-
     text-align: center;
-
-
-
 }
-
-
-
-
-
-
-
 .hero-title {
-
-
-
     font-size: 4rem;
-
-
-
     font-weight: 800;
-
-
-
     line-height: 1.2;
-
-
-
     margin-bottom: 1rem;
-
-
-
     letter-spacing: -0.02em;
-
-
-
 }
-
-
-
-
-
-
-
 .title-ps {
-
-
-
     background: linear-gradient(135deg, var(--ps-blue), var(--ps-light));
-
-
-
     -webkit-background-clip: text;
-
-
-
     -webkit-text-fill-color: transparent;
-
-
-
     background-clip: text;
-
-
-
 }
-
-
-
-
-
-
-
 .title-sep {
-
-
-
     color: var(--text-secondary);
-
-
-
     margin: 0 1rem;
-
-
-
 }
-
-
-
-
-
-
-
 .title-py {
-
-
-
     background: linear-gradient(135deg, var(--py-blue), var(--py-yellow));
-
-
-
     -webkit-background-clip: text;
-
-
-
     -webkit-text-fill-color: transparent;
-
-
-
     background-clip: text;
-
-
-
 }
-
-
-
-
-
-
-
 .hero-subtitle {
-
-
-
     font-size: 1.8rem;
-
-
-
     color: var(--accent-1);
-
-
-
     margin-bottom: 0.5rem;
-
-
-
     font-weight: 600;
-
-
-
 }
-
-
-
-
-
-
-
 .hero-description {
-
-
-
     font-size: 1.2rem;
-
-
-
     color: var(--text-secondary);
-
-
-
     margin-bottom: 2rem;
-
-
-
 }
-
-
-
-
-
-
-
 .hero-stats {
-
-
-
     display: flex;
-
-
-
     justify-content: center;
-
-
-
     align-items: center;
-
-
-
     gap: 3rem;
-
-
-
     margin: 2.5rem 0;
-
-
-
     padding: 1.5rem;
-
-
-
     background: rgba(88, 166, 255, 0.05);
-
-
-
     border-radius: 12px;
-
-
-
     border: 1px solid rgba(88, 166, 255, 0.1);
-
-
-
 }
-
-
-
-
-
-
-
 .stat-item {
-
-
-
     display: flex;
-
-
-
     flex-direction: column;
-
-
-
     align-items: center;
-
-
-
 }
-
-
-
-
-
-
-
 .stat-value {
-
-
-
     font-size: 2.5rem;
-
-
-
     font-weight: 800;
-
-
-
     background: linear-gradient(135deg, var(--ps-blue), var(--py-yellow));
-
-
-
     -webkit-background-clip: text;
-
-
-
     -webkit-text-fill-color: transparent;
-
-
-
     background-clip: text;
-
-
-
 }
-
-
-
-
-
-
-
 .stat-label {
-
-
-
     font-size: 0.9rem;
-
-
-
     color: var(--text-secondary);
-
-
-
     text-transform: uppercase;
-
-
-
     letter-spacing: 0.1em;
-
-
-
     margin-top: 0.5rem;
-
-
-
 }
-
-
-
-
-
-
-
 .stat-separator {
-
-
-
     width: 1px;
-
-
-
     height: 60px;
-
-
-
     background: rgba(88, 166, 255, 0.2);
-
-
-
 }
-
-
-
-
-
-
-
 .hero-cta {
-
-
-
     display: inline-block;
-
-
-
     padding: 1rem 2.5rem;
-
-
-
     background: linear-gradient(135deg, var(--ps-blue), var(--accent-1));
-
-
-
     color: white;
-
-
-
     text-decoration: none;
-
-
-
     border-radius: 8px;
-
-
-
     font-weight: 600;
-
-
-
     transition: all var(--transition-base);
-
-
-
     box-shadow: 0 8px 24px rgba(0, 120, 212, 0.3);
-
-
-
     border: 1px solid rgba(88, 166, 255, 0.3);
-
-
-
 }
-
-
-
-
-
-
-
 .hero-cta:hover {
-
-
-
     transform: translateY(-3px);
-
-
-
     box-shadow: 0 12px 32px rgba(0, 120, 212, 0.4);
-
-
-
     border-color: rgba(88, 166, 255, 0.6);
-
-
-
 }
-
-
-
-
-
-
-
 /* ============================================
-
-
-
    SECTIONS
-
-
-
    ============================================ */
-
-
-
-
-
-
-
 .section {
-
-
-
     max-width: 1200px;
-
-
-
     margin: 0 auto;
-
-
-
     padding: 4rem 2rem;
-
-
-
     border-bottom: 1px solid rgba(88, 166, 255, 0.05);
-
-
-
 }
-
-
-
-
-
-
-
 .section-header {
-
-
-
     margin-bottom: 3rem;
-
-
-
     text-align: center;
-
-
-
 }
-
-
-
-
-
-
-
 .section-header h2 {
-
-
-
     font-size: 2.8rem;
-
-
-
     font-weight: 800;
-
-
-
     margin-bottom: 1rem;
-
-
-
     background: linear-gradient(135deg, var(--accent-1), var(--py-yellow));
-
-
-
     -webkit-background-clip: text;
-
-
-
     -webkit-text-fill-color: transparent;
-
-
-
     background-clip: text;
-
-
-
 }
-
-
-
-
-
-
-
 .header-underline {
-
-
-
     width: 80px;
-
-
-
     height: 3px;
-
-
-
     margin: 1rem auto 0;
-
-
-
     background: linear-gradient(90deg, var(--ps-blue), var(--py-yellow));
-
-
-
     border-radius: 2px;
-
-
-
 }
-
-
-
-
-
-
-
 /* ============================================
-
-
-
    ABOUT SECTION
-
-
-
    ============================================ */
-
-
-
-
-
-
-
 .about-content {
-
-
-
     display: grid;
-
-
-
     grid-template-columns: 1.2fr 1fr;
-
-
-
     gap: 3rem;
-
-
-
     align-items: start;
-
-
-
 }
-
-
-
-
-
-
-
 .about-text p {
-
-
-
     color: var(--text-secondary);
-
-
-
     font-size: 1.1rem;
-
-
-
     line-height: 1.8;
-
-
-
     margin-bottom: 1.5rem;
-
-
-
 }
-
-
-
-
-
-
-
 .tech-stack {
-
-
-
     background: rgba(88, 166, 255, 0.05);
-
-
-
     border: 1px solid rgba(88, 166, 255, 0.1);
-
-
-
     padding: 2rem;
-
-
-
     border-radius: 12px;
-
-
-
     transition: all var(--transition-base);
-
-
-
 }
-
-
-
-
-
-
-
 .tech-stack:hover {
-
-
-
     border-color: rgba(88, 166, 255, 0.3);
-
-
-
     box-shadow: 0 8px 24px rgba(88, 166, 255, 0.1);
-
-
-
 }
-
-
-
-
-
-
-
 .tech-stack h3 {
-
-
-
     font-size: 1.3rem;
-
-
-
     margin-bottom: 1.5rem;
-
-
-
     color: var(--accent-1);
-
-
-
 }
-
-
-
-
-
-
-
 .tech-badges {
-
-
-
     display: flex;
-
-
-
     flex-wrap: wrap;
-
-
-
     gap: 0.8rem;
-
-
-
 }
-
-
-
-
-
-
-
 .badge {
-
-
-
     padding: 0.5rem 1rem;
-
-
-
     border-radius: 20px;
-
-
-
     font-size: 0.9rem;
-
-
-
     font-weight: 600;
-
-
-
     border: 1px solid;
-
-
-
     transition: all var(--transition-fast);
-
-
-
 }
-
-
-
-
-
-
-
 .badge-ps {
-
-
-
     background: rgba(0, 120, 212, 0.1);
-
-
-
     border-color: var(--ps-blue);
-
-
-
     color: var(--ps-light);
-
-
-
 }
-
-
-
-
-
-
-
 .badge-ps:hover {
-
-
-
     background: rgba(0, 120, 212, 0.2);
-
-
-
     box-shadow: 0 0 20px rgba(0, 120, 212, 0.3);
-
-
-
 }
-
-
-
-
-
-
-
 .badge-py {
-
-
-
     background: rgba(55, 105, 148, 0.1);
-
-
-
     border-color: var(--py-blue);
-
-
-
     color: var(--py-yellow);
-
-
-
 }
-
-
-
-
-
-
-
 .badge-py:hover {
-
-
-
     background: rgba(55, 105, 148, 0.2);
-
-
-
     box-shadow: 0 0 20px rgba(55, 105, 148, 0.3);
-
-
-
 }
-
-
-
-
-
-
-
 .badge-other {
-
-
-
     background: rgba(88, 166, 255, 0.1);
-
-
-
     border-color: var(--accent-1);
-
-
-
     color: var(--accent-2);
-
-
-
 }
-
-
-
-
-
-
-
 .badge-other:hover {
-
-
-
     background: rgba(88, 166, 255, 0.2);
-
-
-
     box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
-
-
-
 }
-
-
-
-
-
-
-
 /* ============================================
-
-
-
    SKILLS SECTION
-
-
-
    ============================================ */
-
-
-
-
-
-
-
 .skills-grid {
-
-
-
     display: grid;
-
-
-
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-
-
     gap: 2rem;
-
-
-
 }
-
-
-
-
-
-
-
 .skill-category {
-
-
-
     background: rgba(88, 166, 255, 0.03);
-
-
-
     border: 1px solid rgba(88, 166, 255, 0.1);
-
-
-
     padding: 2rem;
-
-
-
     border-radius: 12px;
-
-
-
     transition: all var(--transition-base);
-
-
-
     position: relative;
-
-
-
     overflow: hidden;
-
-
-
 }
-
-
-
-
-
-
-
 .skill-category::before {
-
-
-
     content: '';
-
-
-
     position: absolute;
-
-
-
     top: -50%;
-
-
-
     right: -50%;
-
-
-
     width: 200px;
-
-
-
     height: 200px;
-
-
-
     background: radial-gradient(circle, rgba(88, 166, 255, 0.1), transparent);
-
-
-
     border-radius: 50%;
-
-
-
     transition: all var(--transition-slow);
-
-
-
 }
-
-
-
-
-
-
-
 .skill-category:hover {
-
-
-
     border-color: rgba(88, 166, 255, 0.3);
-
-
-
     background: rgba(88, 166, 255, 0.08);
-
-
-
     box-shadow: var(--shadow-md);
-
-
-
     transform: translateY(-5px);
-
-
-
 }
-
-
-
-
-
-
-
 .skill-category:hover::before {
-
-
-
     top: -20%;
-
-
-
     right: -20%;
-
-
-
 }
-
-
-
-
-
-
-
 .skill-icon {
-
-
-
     display: flex;
-
-
-
     align-items: center;
-
-
-
     justify-content: center;
-
-
-
     width: 50px;
-
-
-
     height: 50px;
-
-
-
     border-radius: 10px;
-
-
-
     font-weight: 800;
-
-
-
     font-size: 0.9rem;
-
-
-
     margin-bottom: 1rem;
-
-
-
     color: white;
-
-
-
 }
-
-
-
-
-
-
-
 .ps-icon {
-
-
-
     background: linear-gradient(135deg, var(--ps-blue), var(--ps-light));
-
-
-
 }
-
-
-
-
-
-
-
 .py-icon {
-
-
-
     background: linear-gradient(135deg, var(--py-blue), var(--py-yellow));
-
-
-
 }
-
-
-
-
-
-
-
 .other-icon {
-
-
-
     background: linear-gradient(135deg, var(--accent-1), var(--accent-3));
-
-
-
 }
-
-
-
-
-
-
-
 .skill-category h3 {
-
-
-
     font-size: 1.3rem;
-
-
-
     margin-bottom: 1rem;
-
-
-
     color: var(--text-primary);
-
-
-
 }
-
-
-
-
-
-
-
 .skill-list {
-
-
-
     list-style: none;
-
-
-
     margin-bottom: 1.5rem;
-
-
-
 }
-
-
-
-
-
-
-
 .skill-list li {
-
-
-
     padding: 0.5rem 0;
-
-
-
     padding-left: 1.5rem;
-
-
-
     position: relative;
-
-
-
     color: var(--text-secondary);
-
-
-
     font-size: 0.95rem;
-
-
-
 }
-
-
-
-
-
-
-
 .skill-list li::before {
-
-
-
     content: '▸';
-
-
-
     position: absolute;
-
-
-
     left: 0;
-
-
-
     color: var(--accent-1);
-
-
-
     font-weight: bold;
-
-
-
 }
-
-
-
-
-
-
-
 .skill-progress {
-
-
-
     height: 6px;
-
-
-
     background: rgba(88, 166, 255, 0.1);
-
-
-
     border-radius: 3px;
-
-
-
     overflow: hidden;
-
-
-
 }
-
-
-
-
-
-
-
 .progress-bar {
-
-
-
     height: 100%;
-
-
-
     background: linear-gradient(90deg, var(--ps-blue), var(--py-yellow));
-
-
-
     border-radius: 3px;
-
-
-
     transition: width 1s ease-out;
-
-
-
 }
-
-
-
-
-
-
-
 /* ============================================
-
-
-
    WORK SECTION
-
-
-
    ============================================ */
-
-
-
-
-
-
-
 .work-subsection {
-
-
-
     margin-bottom: 3rem;
-
-
-
 }
-
-
-
-
-
-
-
 .subsection-title {
-
-
-
     font-size: 1.5rem;
-
-
-
     font-weight: 700;
-
-
-
     margin-bottom: 2rem;
-
-
-
     color: var(--accent-2);
-
-
-
 }
-
-
-
-
-
-
-
 .work-grid {
-
-
-
     display: grid;
-
-
-
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-
-
-
     gap: 2rem;
-
-
-
 }
-
-
-
-
-
-
-
 .work-card {
-
-
-
     background: rgba(88, 166, 255, 0.04);
-
-
-
     border: 1px solid rgba(88, 166, 255, 0.1);
-
-
-
     border-radius: 12px;
-
-
-
     padding: 1.8rem;
-
-
-
     transition: all var(--transition-base);
-
-
-
     position: relative;
-
-
-
     display: flex;
-
-
-
     flex-direction: column;
-
-
-
 }
-
-
-
-
-
-
-
 .work-card:hover {
-
-
-
     border-color: rgba(88, 166, 255, 0.3);
-
-
-
     background: rgba(88, 166, 255, 0.08);
-
-
-
     box-shadow: var(--shadow-md);
-
-
-
     transform: translateY(-8px);
-
-
-
 }
-
-
-
-
-
-
-
 .card-badge {
-
-
-
     display: inline-block;
-
-
-
     width: fit-content;
-
-
-
     padding: 0.4rem 0.8rem;
-
-
-
     border-radius: 6px;
-
-
-
     font-size: 0.8rem;
-
-
-
     font-weight: 700;
-
-
-
     text-transform: uppercase;
-
-
-
     letter-spacing: 0.1em;
-
-
-
     margin-bottom: 1rem;
-
-
-
 }
-
-
-
-
-
-
-
 .ps-badge {
-
-
-
     background: rgba(0, 120, 212, 0.15);
-
-
-
     color: var(--ps-light);
-
-
-
 }
-
-
-
-
-
-
-
 .py-badge {
-
-
-
     background: rgba(55, 105, 148, 0.15);
-
-
-
     color: var(--py-yellow);
-
-
-
 }
-
-
-
-
-
-
-
 .work-card h4 {
-
-
-
     font-size: 1.4rem;
-
-
-
     margin-bottom: 0.8rem;
-
-
-
     color: var(--text-primary);
-
-
-
 }
-
-
-
-
-
-
-
 .card-description {
-
-
-
     flex-grow: 1;
-
-
-
     color: var(--text-secondary);
-
-
-
     font-size: 0.95rem;
-
-
-
     line-height: 1.6;
-
-
-
     margin-bottom: 1.2rem;
-
-
-
 }
-
-
-
-
-
-
-
 .card-tags {
-
-
-
     display: flex;
-
-
-
     flex-wrap: wrap;
-
-
-
     gap: 0.6rem;
-
-
-
     margin-bottom: 1.2rem;
-
-
-
 }
-
-
-
-
-
-
-
 .tag {
-
-
-
     display: inline-block;
-
-
-
     padding: 0.3rem 0.8rem;
-
-
-
     background: rgba(88, 166, 255, 0.1);
-
-
-
     color: var(--accent-2);
-
-
-
     border-radius: 4px;
-
-
-
     font-size: 0.8rem;
-
-
-
     font-weight: 600;
-
-
-
     border: 1px solid rgba(88, 166, 255, 0.2);
-
-
-
     transition: all var(--transition-fast);
-
-
-
 }
-
-
-
-
-
-
-
 .tag:hover {
-
-
-
     background: rgba(88, 166, 255, 0.2);
-
-
-
     border-color: rgba(88, 166, 255, 0.4);
-
-
-
 }
-
-
-
-
-
-
-
 .card-link {
-
-
-
     color: var(--accent-1);
-
-
-
     text-decoration: none;
-
-
-
     font-weight: 600;
-
-
-
     transition: all var(--transition-fast);
-
-
-
     display: inline-flex;
-
-
-
     align-items: center;
-
-
-
     gap: 0.5rem;
-
-
-
 }
-
-
-
-
-
-
-
 .card-link:hover {
-
-
-
     color: var(--accent-2);
-
-
-
     gap: 0.8rem;
-
-
-
 }
-
-
-
-
-
-
-
 /* ============================================
-
-
-
    COMPOSITION SECTION
-
-
-
    ============================================ */
-
-
-
-
-
-
-
 .composition-container {
-
-
-
     max-width: 800px;
-
-
-
     margin: 0 auto;
-
-
-
 }
-
-
-
-
-
-
-
 .chart-bar {
-
-
-
     display: flex;
-
-
-
     height: 60px;
-
-
-
     border-radius: 12px;
-
-
-
     overflow: hidden;
-
-
-
     box-shadow: var(--shadow-md);
-
-
-
     margin-bottom: 2rem;
-
-
-
 }
-
-
-
-
-
-
-
 .chart-segment {
-
-
-
     display: flex;
-
-
-
     align-items: center;
-
-
-
     justify-content: center;
-
-
-
     color: white;
-
-
-
     font-weight: 700;
-
-
-
     font-size: 1.2rem;
-
-
-
     transition: all var(--transition-base);
-
-
-
     position: relative;
-
-
-
 }
-
-
-
-
-
-
-
 .chart-segment:hover {
-
-
-
     filter: brightness(1.2);
-
-
-
 }
-
-
-
-
-
-
-
 .ps-segment {
-
-
-
     background: linear-gradient(135deg, var(--ps-blue), var(--ps-light));
-
-
-
 }
-
-
-
-
-
-
-
 .py-segment {
-
-
-
     background: linear-gradient(135deg, var(--py-blue), var(--py-yellow));
-
-
-
 }
-
-
-
-
-
-
-
 .segment-label {
-
-
-
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-
-
-
 }
-
-
-
-
-
-
-
 .composition-text {
-
-
-
     text-align: center;
-
-
-
     color: var(--text-secondary);
-
-
-
     font-size: 1.1rem;
-
-
-
     line-height: 1.8;
-
-
-
 }
-
-
-
-
-
-
-
 /* ============================================
-
-
-
    CONTACT SECTION
-
-
-
    ============================================ */
-
-
-
-
-
-
-
 .contact-content {
-
-
-
     text-align: center;
-
-
-
     max-width: 600px;
-
-
-
     margin: 0 auto;
-
-
-
 }
-
-
-
-
-
-
-
 .contact-content p {
-
-
-
     font-size: 1.1rem;
-
-
-
     color: var(--text-secondary);
-
-
-
     margin-bottom: 2rem;
-
-
-
 }
-
-
-
-
-
-
-
 .contact-links {
-
-
-
     display: flex;
-
-
-
     flex-direction: column;
-
-
-
     gap: 1rem;
-
-
-
     align-items: center;
-
-
-
 }
-
-
-
-
-
-
-
 .contact-link {
-
-
-
     display: inline-flex;
-
-
-
     align-items: center;
-
-
-
     gap: 0.8rem;
-
-
-
     padding: 1rem 2rem;
-
-
-
     border-radius: 8px;
-
-
-
     text-decoration: none;
-
-
-
     font-weight: 600;
-
-
-
     transition: all var(--transition-base);
-
-
-
     border: 2px solid;
-
-
-
 }
-
-
-
-
-
-
-
 .contact-link.primary {
-
-
-
     background: linear-gradient(135deg, var(--ps-blue), var(--accent-1));
-
-
-
     border-color: rgba(88, 166, 255, 0.5);
-
-
-
     color: white;
-
-
-
     box-shadow: 0 8px 24px rgba(0, 120, 212, 0.3);
-
-
-
 }
-
-
-
-
-
-
-
 .contact-link.primary:hover {
-
-
-
     transform: translateY(-3px);
-
-
-
     box-shadow: 0 12px 32px rgba(0, 120, 212, 0.4);
-
-
-
     border-color: rgba(88, 166, 255, 0.8);
-
-
-
 }
-
-
-
-
-
-
-
 .contact-link.secondary {
-
-
-
     background: transparent;
-
-
-
     border-color: rgba(88, 166, 255, 0.3);
-
-
-
     color: var(--accent-1);
-
-
-
 }
-
-
-
-
-
-
-
 .contact-link.secondary:hover {
-
-
-
     background: rgba(88, 166, 255, 0.1);
-
-
-
     border-color: rgba(88, 166, 255, 0.6);
-
-
-
 }
-
-
-
-
-
-
-
 .link-icon {
-
-
-
     font-size: 1.2rem;
-
-
-
     transition: transform var(--transition-base);
-
-
-
 }
-
-
-
-
-
-
-
 .contact-link:hover .link-icon {
-
-
-
     transform: translateX(3px);
-
-
-
 }
-
-
-
-
-
-
-
 /* ============================================
-
-
-
    FOOTER
-
-
-
    ============================================ */
-
-
-
-
-
-
-
 .footer {
-
-
-
     background: var(--bg-darker);
-
-
-
     border-top: 1px solid rgba(88, 166, 255, 0.1);
-
-
-
     padding: 2rem;
-
-
-
     text-align: center;
-
-
-
 }
-
-
-
-
-
-
-
 .footer-content p {
-
-
-
     color: var(--text-secondary);
-
-
-
     margin: 0.5rem 0;
-
-
-
 }
-
-
-
-
-
-
-
 .footer-credit {
-
-
-
     font-size: 0.9rem;
-
-
-
     color: var(--text-muted);
-
-
-
 }
-
-
-
-
-
-
-
 /* ============================================
-
-
-
    RESPONSIVE DESIGN
-
-
-
    ============================================ */
-
-
-
-
-
-
-
 @media (max-width: 768px) {
-
-
-
     .nav-links {
-
-
-
         gap: 1rem;
-
-
-
     }
-
-
-
-
-
-
-
     .nav-link {
-
-
-
         font-size: 0.9rem;
-
-
-
     }
-
-
-
-
-
-
-
     .hero {
-
-
-
         padding: 100px 1rem 60px;
-
-
-
     }
-
-
-
-
-
-
-
     .hero-title {
-
-
-
         font-size: 2.2rem;
-
-
-
     }
-
-
-
-
-
-
-
     .title-sep {
-
-
-
         margin: 0 0.5rem;
-
-
-
     }
-
-
-
-
-
-
-
     .hero-subtitle {
-
-
-
         font-size: 1.3rem;
-
-
-
     }
-
-
-
-
-
-
-
     .hero-description {
-
-
-
         font-size: 1rem;
-
-
-
     }
-
-
-
-
-
-
-
     .hero-stats {
-
-
-
         flex-direction: column;
-
-
-
         gap: 1.5rem;
-
-
-
     }
-
-
-
-
-
-
-
     .stat-separator {
-
-
-
         width: 60px;
-
-
-
         height: 1px;
-
-
-
     }
-
-
-
-
-
-
-
     .section {
-
-
-
         padding: 3rem 1rem;
-
-
-
     }
-
-
-
-
-
-
-
     .section-header h2 {
-
-
-
         font-size: 2rem;
-
-
-
     }
-
-
-
-
-
-
-
     .about-content {
-
-
-
         grid-template-columns: 1fr;
-
-
-
         gap: 2rem;
-
-
-
     }
-
-
-
-
-
-
-
     .skills-grid {
-
-
-
         grid-template-columns: 1fr;
-
-
-
     }
-
-
-
-
-
-
-
     .work-grid {
-
-
-
         grid-template-columns: 1fr;
-
-
-
     }
-
-
-
-
-
-
-
     .contact-links {
-
-
-
         flex-direction: column;
-
-
-
     }
-
-
-
-
-
-
-
     .contact-link {
-
-
-
         width: 100%;
-
-
-
         justify-content: center;
-
-
-
     }
-
-
-
 }
-
-
-
-
-
-
-
 @media (max-width: 480px) {
-
-
-
     .navbar {
-
-
-
         padding: 0 1rem;
-
-
-
     }
-
-
-
-
-
-
-
     .nav-links {
-
-
-
         gap: 0.8rem;
-
-
-
     }
-
-
-
-
-
-
-
     .nav-link {
-
-
-
         font-size: 0.8rem;
-
-
-
     }
-
-
-
-
-
-
-
     .brand-text {
-
-
-
         display: none;
-
-
-
     }
-
-
-
-
-
-
-
     .hero {
-
-
-
         padding: 80px 1rem 40px;
-
-
-
     }
-
-
-
-
-
-
-
     .hero-title {
-
-
-
         font-size: 1.8rem;
-
-
-
     }
-
-
-
-
-
-
-
     .hero-subtitle {
-
-
-
         font-size: 1.1rem;
-
-
-
     }
-
-
-
-
-
-
-
     .hero-description {
-
-
-
         font-size: 0.95rem;
-
-
-
     }
-
-
-
-
-
-
-
     .work-grid {
-
-
-
         grid-template-columns: 1fr;
-
-
-
     }
-
-
-
 }
-
-
 
