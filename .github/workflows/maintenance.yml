@@ -1,0 +1,75 @@
+# ============================================================================
+# .github/workflows/maintenance.yml — Automated Repository Maintenance
+# ============================================================================
+# This GitHub Actions workflow runs the full maintenance suite on every push
+# to main and on a weekly schedule. It ensures the repository stays consistent
+# and the GitHub Pages content stays in sync with the actual repo contents.
+#
+# What it does:
+#   1. Checks out the repository
+#   2. Sets up Python 3.12
+#   3. Runs the full maintenance suite (consistency check + pages update)
+#   4. Commits and pushes any auto-generated changes (e.g., updated docs/index.md)
+#
+# Triggers:
+#   - Push to main branch
+#   - Weekly schedule (Sundays at 00:00 UTC)
+#   - Manual dispatch (workflow_dispatch)
+# ============================================================================
+
+name: Repository Maintenance
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Run weekly on Sundays at midnight UTC to catch any drift
+    - cron: "0 0 * * 0"
+  workflow_dispatch:
+    # Allow manual triggering from the Actions tab
+
+# Ensure only one maintenance run at a time to avoid conflicts
+concurrency:
+  group: maintenance
+  cancel-in-progress: true
+
+permissions:
+  contents: write  # Required to push auto-generated changes
+
+jobs:
+  maintenance:
+    name: Full Maintenance Pass
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository with full history
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for accurate scanning
+
+      # Step 2: Set up Python 3.12 (matches local development)
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Step 3: Run the full maintenance suite
+      # This runs: database backup → consistency check → pages update
+      - name: Run maintenance
+        run: make maintenance
+
+      # Step 4: Commit and push any changes made by the maintenance scripts
+      # (e.g., updated docs/index.md, database initialization)
+      - name: Commit auto-generated changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          # Only commit if there are actual changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit — repository is already in sync."
+          else
+            git commit -m "chore: auto-update pages and consistency [maintenance]"
+            git push
+          fi

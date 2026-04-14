@@ -1,0 +1,54 @@
+# ============================================================================
+# .editorconfig — Unified formatting rules for the entire ProjectPortfolio repo
+# ============================================================================
+# EditorConfig helps maintain consistent coding styles between different editors
+# and IDEs. See https://editorconfig.org for specification details.
+#
+# Standards chosen:
+#   - UTF-8 encoding everywhere (universal compatibility)
+#   - LF line endings (matches .gitattributes text=auto on Unix/macOS)
+#   - 4-space indentation for Python (PEP 8 standard)
+#   - 2-space indentation for HTML/CSS/JS/YAML/JSON (web convention)
+#   - Trailing whitespace trimmed (clean diffs)
+#   - Final newline inserted (POSIX compliance)
+# ============================================================================
+
+root = true
+
+# Default: all files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+# Web files: HTML, CSS, JavaScript, JSON, YAML
+[*.{html,css,js,json,yml,yaml}]
+indent_size = 2
+
+# Markdown: preserve trailing whitespace (used for line breaks in Markdown)
+[*.md]
+trim_trailing_whitespace = false
+indent_size = 2
+
+# Makefile: tabs required by Make syntax
+[Makefile]
+indent_style = tab
+
+# PowerShell scripts
+[*.ps1]
+indent_size = 4
+
+# Shell scripts
+[*.sh]
+indent_size = 4
+
+# XML files (sitemap, configs)
+[*.xml]
+indent_size = 2
+
+# TOML configuration files
+[*.toml]
+indent_size = 2

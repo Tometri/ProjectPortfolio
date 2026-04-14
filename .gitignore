@@ -1,3 +1,7 @@
+# ============================================================================
+# .gitignore — Files and directories excluded from version control
+# ============================================================================
+
 # OS files
 .DS_Store
 Thumbs.db
@@ -19,5 +23,8 @@ venv/
 # Logs
 *.log
 
-#Google ADK
-*.env
+# Google ADK and environment secrets (keep .env.example tracked)
+.env
+
+# Database backups (the main .db is tracked; backups are local only)
+data/backups/
