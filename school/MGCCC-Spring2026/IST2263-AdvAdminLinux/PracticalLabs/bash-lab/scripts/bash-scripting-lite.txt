@@ -1,0 +1,199 @@
+1. The shebang line indicates to the OS which interpreter to use when executing the script.
+2 using ./ uses the shebang line defined interpreter, while using bash runs it in bash explicitly despite what had been defined.
+3. Validation prevents mistakes or unpredictable 
+
+  GNU nano 8.4  hello_info.sh
+#!/bin/bash
+
+echo "Howdy!"
+echo "User: $LOGNAME"
+echo "Current date and time: $(date)"
+echo "Current directory: $(pwd)"
+
+when ran, outputs: 
+"
+Howdy!
+User: tometri
+Current date and time: Thu Apr 16 03:04:12 PM CDT 2026
+Current directory: /home/tometri/Documents/GitHub/ProjectPortfolio/school/MGCCC-Spring2026/IST2263-AdvAdminLinux/PracticalLabs/bash-lab/scripts
+"
+ GNU nano 8.4  backup_dir.sh
+#!/bin/bash
+read -p "Enter directory to back up:" S>
+if [ ! -d "$SRC_DIR" ]; then
+        echo "ERROR: Directory '$SRC_DI>
+        exit 1
+fi
+BACKUP_DIR="$HOME/backups"
+mkdir -p "$BACKUP_DIR"
+TIMESTAMP=$(date)
+SRC_BASENAME=$(basename "$SRC_DIR")
+BACKUP_FILE="$BACKUP_DIR/${SRC_BASENAME>
+
+tar -czf "$BACKUP_FILE" -C "$(dirname ">
+if [ $? -ne 0 ]; then
+    echo "Backup failed."
+    exit 1
+fi
+
+echo "Backup created: $BACKUP_FILE"
+
+Outputs:
+./backup_dir.sh
+Enter directory to back up:test
+Backup created: /home/tometri/backups/test_Thu Apr 16 03:08:40 PM CDT 2026.tar.gz
+
+ls -lh ~/backups
+total 4.0K
+-rw-rw-r-- 1 tometri tometri 114 Apr 16 15:08 'test_Thu Apr 16 03:08:40 PM CDT 2026.tar.gz'
+
+  GNU nano 8.4 ./perm_check.sh
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 DIRECTORY_PATH"
+    exit 1
+fi
+DIR="$1"
+
+if [ ! -d "$DIR" ]; then
+    echo "Error: '$DIR' is not a direct>
+    exit 1
+fi
+for ITEM in "$DIR"/*; do
+    echo "Checking: $ITEM"
+done
+for ITEM in "$DIR"/*; do
+    # Skip if glob didn't match anything
+    [ ! -e "$ITEM" ] && continue
+
+    echo "Item: $ITEM"
+
+    if [ -r "$ITEM" ]; then
+        echo "  readable: yes"
+    else
+        echo "  readable: no"
+    fi
+
+    if [ -w "$ITEM" ]; then
+        echo "  writable: yes"
+    else
+        echo "  writable: no"
+    fi
+
+    if [ -x "$ITEM" ]; then
+        echo "  executable: yes"
+    else
+        echo "  executable: no"
+    fi
+
+    echo
+done
+
+Output:
+
+./perm_check.sh ~
+Checking: /home/tometri/backups
+Checking: /home/tometri/Desktop
+Checking: /home/tometri/Documents
+Checking: /home/tometri/Downloads
+Checking: /home/tometri/Games
+Checking: /home/tometri/Music
+Checking: /home/tometri/ollama-models
+Checking: /home/tometri/open-webui
+Checking: /home/tometri/Pictures
+Checking: /home/tometri/Public
+Checking: /home/tometri/SDCard
+Checking: /home/tometri/searxng
+Checking: /home/tometri/snap
+Checking: /home/tometri/snort3
+Checking: /home/tometri/Templates
+Checking: /home/tometri/Videos
+Checking: /home/tometri/VirtualBox VMs
+Item: /home/tometri/backups
+  readable: yes
+  writable: yes
+  executable: yes
+
+Item: /home/tometri/Desktop
+  readable: yes
+  writable: yes
+  executable: yes
+
+Item: /home/tometri/Documents
+  readable: yes
+  writable: yes
+  executable: yes
+
+Item: /home/tometri/Downloads
+  readable: yes
+  writable: yes
+  executable: yes
+
+Item: /home/tometri/Games
+  readable: yes
+  writable: yes
+  executable: yes
+
+Item: /home/tometri/Music
+  readable: yes
+  writable: yes
+  executable: yes
+
+Item: /home/tometri/ollama-models
+  readable: yes
+  writable: yes
+  executable: yes
+
+Item: /home/tometri/open-webui
+  readable: yes
+  writable: no
+  executable: yes
+
+Item: /home/tometri/Pictures
+  readable: yes
+  writable: yes
+  executable: yes
+
+Item: /home/tometri/Public
+  readable: yes
+  writable: yes
+  executable: yes
+
+Item: /home/tometri/SDCard
+  readable: yes
+  writable: yes
+  executable: yes
+
+Item: /home/tometri/searxng
+  readable: yes
+  writable: no
+  executable: yes
+
+Item: /home/tometri/snap
+  readable: yes
+  writable: yes
+  executable: yes
+
+Item: /home/tometri/snort3
+  readable: yes
+  writable: no
+  executable: yes
+
+Item: /home/tometri/Templates
+  readable: yes
+  writable: yes
+  executable: yes
+
+Item: /home/tometri/Videos
+  readable: yes
+  writable: yes
+  executable: yes
+
+Item: /home/tometri/VirtualBox VMs
+  readable: yes
+  writable: yes
+  executable: yes
+
+
+
