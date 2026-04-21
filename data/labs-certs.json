@@ -1,0 +1,99 @@
+{
+  "generated_at": "2026-04-14T23:32:18.724125",
+  "labs": [
+    {
+      "id": 2,
+      "name": "Google ADK Philosopher Agent",
+      "description": "YAML-configured AI agent for philosophy and ethics discussions",
+      "repo_path": "Labs/adk-workspace/my_config_agent/",
+      "start_date": "2026-03-15",
+      "completion_date": "2026-03-20",
+      "status": "completed",
+      "difficulty": "beginner",
+      "notes": "Demonstrates declarative agent configuration using YAML",
+      "verification_link": "",
+      "created_at": "2026-04-14 23:32:13",
+      "updated_at": "2026-04-14 23:32:13"
+    },
+    {
+      "id": 1,
+      "name": "Google ADK Coding Assistant Agent",
+      "description": "Built an AI coding assistant agent using Google's Agent Development Kit",
+      "repo_path": "labs/adk-workspace/my_first_agent/",
+      "start_date": "2026-03-01",
+      "completion_date": "2026-03-15",
+      "status": "completed",
+      "difficulty": "intermediate",
+      "notes": "Uses Gemini 2.5 Flash model for code generation and review",
+      "verification_link": "",
+      "created_at": "2026-04-14 23:32:13",
+      "updated_at": "2026-04-14 23:32:13"
+    },
+    {
+      "id": 4,
+      "name": "Digital Forensics Hash Calculations",
+      "description": "Hash calculation exercises for file integrity verification",
+      "repo_path": "school/MGCCC-Spring2026/IST1613-CompForensics/",
+      "start_date": "2026-01-20",
+      "completion_date": "",
+      "status": "in_progress",
+      "difficulty": "intermediate",
+      "notes": "Includes metadata analysis and OSINT practice",
+      "verification_link": "",
+      "created_at": "2026-04-14 23:32:13",
+      "updated_at": "2026-04-14 23:32:13"
+    },
+    {
+      "id": 3,
+      "name": "Linux System Administration Labs",
+      "description": "File system hierarchies, permissions, user management, backup/restore",
+      "repo_path": "school/MGCCC-Spring2026/IST2263-AdvAdminLinux/",
+      "start_date": "2026-01-15",
+      "completion_date": "",
+      "status": "in_progress",
+      "difficulty": "intermediate",
+      "notes": "Part of IST2263 coursework at MGCCC",
+      "verification_link": "",
+      "created_at": "2026-04-14 23:32:13",
+      "updated_at": "2026-04-14 23:32:13"
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "name": "Microsoft Azure Fundamentals (AZ-900)",
+      "issuer": "Microsoft",
+      "issue_date": "2025-06-01",
+      "expiry_date": "",
+      "credential_id": "AZ-900",
+      "verification_link": "",
+      "notes": "Core Azure services, identity, networking, security basics",
+      "created_at": "2026-04-14 23:32:13",
+      "updated_at": "2026-04-14 23:32:13"
+    },
+    {
+      "id": 2,
+      "name": "CompTIA Security+",
+      "issuer": "CompTIA",
+      "issue_date": "",
+      "expiry_date": "",
+      "credential_id": "",
+      "verification_link": "",
+      "notes": "In progress \u2014 cybersecurity fundamentals certification",
+      "created_at": "2026-04-14 23:32:13",
+      "updated_at": "2026-04-14 23:32:13"
+    },
+    {
+      "id": 3,
+      "name": "ISC2 Certified in Cybersecurity (CC)",
+      "issuer": "ISC2",
+      "issue_date": "",
+      "expiry_date": "",
+      "credential_id": "",
+      "verification_link": "",
+      "notes": "In progress \u2014 entry-level cybersecurity certification",
+      "created_at": "2026-04-14 23:32:13",
+      "updated_at": "2026-04-14 23:32:13"
+    }
+  ]
+}

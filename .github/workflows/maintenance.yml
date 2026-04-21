@@ -1,0 +1,98 @@
+# =============================================================================
+# maintenance.yml — Automated repository maintenance for ProjectPortfolio
+# =============================================================================
+#
+# This workflow runs the repository maintenance scripts to:
+#   1. Check for consistency issues (trailing whitespace, broken links, etc.)
+#   2. Regenerate GitHub Pages files (docs/index.md, sitemap.xml)
+#   3. Export labs & certifications data from the database
+#
+# Triggers:
+#   - Manual dispatch (workflow_dispatch) — run anytime from the Actions tab
+#   - Scheduled: every Monday at 06:00 UTC
+#   - Push to main branch (only when relevant files change)
+#
+# The workflow auto-fixes safe issues and commits any changes back to the
+# repository. If no changes are detected, it exits cleanly.
+# =============================================================================
+name: Repository Maintenance
+on:
+  # Manual trigger — run from the GitHub Actions tab
+  workflow_dispatch:
+  # Scheduled run — every Monday at 06:00 UTC
+  schedule:
+    - cron: '0 6 * * 1'
+  # Run on push to main when content files change
+  push:
+    branches: [main]
+    paths:
+      - 'school/**'
+      - 'SelfStudy/**'
+      - 'labs/**'
+      - 'Labs/**'
+      - 'resume/**'
+      - 'docs/**'
+      - 'scripts/**'
+      - 'data/**'
+      - '*.md'
+      - '*.html'
+# Only allow one maintenance run at a time
+concurrency:
+  group: maintenance
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  maintenance:
+    name: Run Maintenance Scripts
+    runs-on: ubuntu-latest
+    steps:
+      # -----------------------------------------------------------------
+      # Step 1: Check out the repository
+      # -----------------------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Full history needed for accurate file scanning
+          fetch-depth: 0
+      # -----------------------------------------------------------------
+      # Step 2: Set up Python
+      # -----------------------------------------------------------------
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      # -----------------------------------------------------------------
+      # Step 3: Run consistency check with auto-fix
+      # This fixes trailing whitespace, CRLF line endings, and missing
+      # final newlines automatically.
+      # -----------------------------------------------------------------
+      - name: Run consistency check (auto-fix)
+        run: python scripts/check_consistency.py --fix
+        # Continue even if issues are found that can't be auto-fixed
+        continue-on-error: true
+      # -----------------------------------------------------------------
+      # Step 4: Initialize database (if needed) and update pages
+      # Regenerates docs/index.md, sitemap.xml, and data exports.
+      # -----------------------------------------------------------------
+      - name: Initialize database
+        run: python scripts/database.py init
+      - name: Update pages
+        run: python scripts/update_pages.py
+      # -----------------------------------------------------------------
+      # Step 5: Commit and push any changes
+      # If the maintenance scripts modified files, commit them back.
+      # If nothing changed, this step does nothing.
+      # -----------------------------------------------------------------
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: automated maintenance update [skip ci]"
+            git push
+          fi
+

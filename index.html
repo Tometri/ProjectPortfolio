@@ -27,7 +27,6 @@
             <div class="nav-accent"></div>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-background">
@@ -46,6 +45,7 @@
             <p class="hero-description">
                 Building robust automation, exploring cybersecurity, and documenting the journey from IT novice to skilled professional
             </p>
+
             
             <div class="hero-stats">
                 <div class="stat-item">
@@ -63,11 +63,9 @@
                     <div class="stat-label">Committed</div>
                 </div>
             </div>
-
             <a href="#work" class="hero-cta">View My Work</a>
         </div>
     </section>
-
     <!-- About Section -->
     <section class="section" id="about">
         <div class="section-header">
@@ -104,7 +102,6 @@
             </div>
         </div>
     </section>
-
     <!-- Skills Section -->
     <section class="section" id="skills">
         <div class="section-header">
@@ -126,7 +123,6 @@
                     <div class="progress-bar" style="width: 85%"></div>
                 </div>
             </div>
-
             <!-- Python Skills -->
             <div class="skill-category">
                 <div class="skill-icon py-icon">PY</div>
@@ -141,7 +137,6 @@
                     <div class="progress-bar" style="width: 75%"></div>
                 </div>
             </div>
-
             <!-- Linux/System Skills -->
             <div class="skill-category">
                 <div class="skill-icon other-icon">LX</div>
@@ -156,7 +151,6 @@
                     <div class="progress-bar" style="width: 80%"></div>
                 </div>
             </div>
-
             <!-- Security Skills -->
             <div class="skill-category">
                 <div class="skill-icon other-icon">SEC</div>
@@ -171,7 +165,6 @@
                     <div class="progress-bar" style="width: 70%"></div>
                 </div>
             </div>
-
             <!-- Networking Skills -->
             <div class="skill-category">
                 <div class="skill-icon other-icon">NET</div>
@@ -186,7 +179,6 @@
                     <div class="progress-bar" style="width: 72%"></div>
                 </div>
             </div>
-
             <!-- Tools & Platforms -->
             <div class="skill-category">
                 <div class="skill-icon other-icon">TOOLS</div>
@@ -203,24 +195,26 @@
             </div>
         </div>
     </section>
-
     <!-- Work Section -->
+    <!-- NOTE: This section reflects the actual repository contents. When adding
+         new coursework or projects, update this section and run:
+         python scripts/update_pages.py
+         to regenerate the docs/index.md and labs/certs sections automatically. -->
     <section class="section" id="work">
         <div class="section-header">
             <h2>Featured Work</h2>
             <div class="header-underline"></div>
         </div>
-
-        <!-- School Work -->
+        <!-- School Work — all 5 courses from school/MGCCC-Spring2026/ -->
         <div class="work-subsection">
             <h3 class="subsection-title">Academic Projects (MGCCC - Spring 2026)</h3>
             <div class="work-grid">
                 <div class="work-card">
-                    <span class="card-badge ps-badge">PowerShell</span>
+                    <span class="card-badge ps-badge">Linux</span>
                     <h4>IST2263: Advanced Linux Administration</h4>
                     <p class="card-description">
-                        Comprehensive Linux administration coursework covering command-line mastery, filesystem management, permissions, 
-                        user administration, and advanced system configuration techniques.
+                        Comprehensive Linux administration coursework covering command-line mastery, filesystem management, permissions,
+                        user administration, backup/restore, and secure server design.
                     </p>
                     <div class="card-tags">
                         <span class="tag">Linux</span>
@@ -229,13 +223,12 @@
                     </div>
                     <a href="school/MGCCC-Spring2026/IST2263-AdvAdminLinux/README.odt" class="card-link">View Project →</a>
                 </div>
-
                 <div class="work-card">
-                    <span class="card-badge py-badge">Python</span>
+                    <span class="card-badge py-badge">Security</span>
                     <h4>IST1613: Computer Forensics</h4>
                     <p class="card-description">
-                        Digital forensics investigation techniques, evidence collection, analysis workflows, and forensic reporting. 
-                        Practical application of forensic principles and tools.
+                        Digital forensics investigation techniques, evidence collection, hash calculations,
+                        metadata analysis, and forensic reporting with practical tool application.
                     </p>
                     <div class="card-tags">
                         <span class="tag">Forensics</span>
@@ -244,13 +237,12 @@
                     </div>
                     <a href="school/MGCCC-Spring2026/IST1613-CompForensics/README.txt" class="card-link">View Project →</a>
                 </div>
-
                 <div class="work-card">
-                    <span class="card-badge ps-badge">PowerShell</span>
+                    <span class="card-badge ps-badge">Management</span>
                     <h4>IST2533: IT Project Management</h4>
                     <p class="card-description">
-                        Project planning, execution, and management within IT environments. Documentation standards, team coordination, 
-                        and technical project oversight.
+                        Project planning, execution, and management within IT environments. Research questions,
+                        documentation standards, and technical project oversight across 10+ modules.
                     </p>
                     <div class="card-tags">
                         <span class="tag">Management</span>
@@ -259,9 +251,70 @@
                     </div>
                     <a href="school/MGCCC-Spring2026/IST2533-ITProjectManagement/README.odt" class="card-link">View Project →</a>
                 </div>
+                <div class="work-card">
+                    <span class="card-badge ps-badge">Office</span>
+                    <h4>CSC1123: Computer Applications</h4>
+                    <p class="card-description">
+                        Applied coursework in Word, Excel, Access, and PowerPoint spanning 13 modules.
+                        Practical document creation, data analysis, and database management projects.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Office</span>
+                        <span class="tag">Excel</span>
+                        <span class="tag">Access</span>
+                    </div>
+                    <a href="school/MGCCC-Spring2026/CSC1123-ComputerApplications/README.odt" class="card-link">View Project →</a>
+                </div>
+                <div class="work-card">
+                    <span class="card-badge py-badge">Science</span>
+                    <h4>BIO1134: Biology</h4>
+                    <p class="card-description">
+                        General biology coursework covering cell biology, chemistry, molecular biology,
+                        genetics, cellular energy, and cell division with comprehensive lecture materials.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Biology</span>
+                        <span class="tag">Science</span>
+                        <span class="tag">General Ed</span>
+                    </div>
+                    <a href="school/MGCCC-Spring2026/BIO1134-Biology/README.odt" class="card-link">View Project →</a>
+                </div>
             </div>
         </div>
-
+        <!-- Labs — from labs/ and Labs/ directories -->
+        <div class="work-subsection">
+            <h3 class="subsection-title">Labs & Hands-On Projects</h3>
+            <div class="work-grid">
+                <div class="work-card">
+                    <span class="card-badge py-badge">Python</span>
+                    <h4>Google ADK: Coding Assistant Agent</h4>
+                    <p class="card-description">
+                        Built an AI coding assistant agent using Google's Agent Development Kit (ADK)
+                        with the Gemini 2.5 Flash model. Assists with code generation, review, and testing.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">AI/ML</span>
+                        <span class="tag">Google ADK</span>
+                        <span class="tag">Python</span>
+                    </div>
+                    <a href="labs/adk-workspace/my_first_agent/agent.py" class="card-link">View Agent →</a>
+                </div>
+                <div class="work-card">
+                    <span class="card-badge py-badge">YAML</span>
+                    <h4>Google ADK: Philosopher Agent</h4>
+                    <p class="card-description">
+                        A YAML-configured AI agent focused on philosophy, ethics, and morality discussions.
+                        Demonstrates declarative agent configuration using Google ADK Skills course materials.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">AI/ML</span>
+                        <span class="tag">Google ADK</span>
+                        <span class="tag">YAML Config</span>
+                    </div>
+                    <a href="Labs/adk-workspace/my_config_agent/root_agent.yaml" class="card-link">View Config →</a>
+                </div>
+            </div>
+        </div>
         <!-- Self-Study Projects -->
         <div class="work-subsection">
             <h3 class="subsection-title">Self-Study Projects</h3>
@@ -270,7 +323,7 @@
                     <span class="card-badge py-badge">Python</span>
                     <h4>Bill Split Calculator</h4>
                     <p class="card-description">
-                        A practical Python utility for calculating fair bill splits among friends. Features include tip calculation, 
+                        A practical Python utility for calculating fair bill splits among friends. Features include tip calculation,
                         currency formatting, and interactive user prompts.
                     </p>
                     <div class="card-tags">
@@ -278,42 +331,85 @@
                         <span class="tag">Utility</span>
                         <span class="tag">Finance</span>
                     </div>
-                    <a href="self-study/scripting/bill-split-calculator.py" class="card-link">View Project →</a>
+                    <a href="SelfStudy/scripting/bill-split-calculator.py" class="card-link">View Project →</a>
                 </div>
-
                 <div class="work-card">
-                    <span class="card-badge ps-badge">PowerShell</span>
-                    <h4>System Automation Scripts</h4>
+                    <span class="card-badge ps-badge">Config</span>
+                    <h4>Starship Terminal Config</h4>
                     <p class="card-description">
-                        Collection of PowerShell scripts for Windows system administration, user management, and routine maintenance tasks. 
-                        Production-ready automation solutions.
+                        A comprehensive, information-dense retro terminal prompt configuration for Starship.
+                        Features system stats, git status, language environments, and battery monitoring.
                     </p>
                     <div class="card-tags">
-                        <span class="tag">PowerShell</span>
-                        <span class="tag">Automation</span>
-                        <span class="tag">Admin</span>
+                        <span class="tag">Terminal</span>
+                        <span class="tag">TOML</span>
+                        <span class="tag">Shell</span>
                     </div>
-                    <a href="self-study/" class="card-link">View Scripts →</a>
+                    <a href="StarshipConfig/README.md" class="card-link">View Config →</a>
                 </div>
-
                 <div class="work-card">
-                    <span class="card-badge py-badge">Python</span>
+                    <span class="card-badge py-badge">Meta</span>
                     <h4>Portfolio Repository</h4>
                     <p class="card-description">
-                        This portfolio itself! A well-organized repository documenting coursework, labs, and self-study projects. 
-                        Demonstrates organization, documentation best practices, and version control skills.
+                        This portfolio itself — a well-organized repository with automated maintenance scripts,
+                        a labs/certifications database, and GitHub Pages integration.
                     </p>
                     <div class="card-tags">
                         <span class="tag">Documentation</span>
+                        <span class="tag">Automation</span>
                         <span class="tag">Portfolio</span>
-                        <span class="tag">Organization</span>
                     </div>
                     <a href="https://github.com/Tometri/ProjectPortfolio" class="card-link">View Repository →</a>
                 </div>
             </div>
         </div>
+        <!-- Labs & Certifications — dynamically generated section placeholder -->
+        <!-- This section is updated by scripts/update_pages.py from data/labs-certs.db -->
+        <div class="work-subsection" id="labs-certs">
+            <h3 class="subsection-title">Certifications</h3>
+            <div class="work-grid">
+                <div class="work-card">
+                    <span class="card-badge ps-badge">Cloud</span>
+                    <h4>Microsoft Azure Fundamentals (AZ-900)</h4>
+                    <p class="card-description">
+                        Microsoft Certified: Azure Fundamentals — covering core Azure services, identity,
+                        networking, and security basics.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Azure</span>
+                        <span class="tag">Cloud</span>
+                        <span class="tag">Microsoft</span>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <span class="card-badge py-badge">Security</span>
+                    <h4>CompTIA Security+ (In Progress)</h4>
+                    <p class="card-description">
+                        Industry-standard cybersecurity certification covering threat management,
+                        cryptography, identity management, and security operations.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Security</span>
+                        <span class="tag">CompTIA</span>
+                        <span class="tag">In Progress</span>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <span class="card-badge py-badge">Security</span>
+                    <h4>ISC2 Certified in Cybersecurity (In Progress)</h4>
+                    <p class="card-description">
+                        Entry-level cybersecurity certification from ISC2 covering security principles,
+                        incident response, access controls, and network security.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">ISC2</span>
+                        <span class="tag">Cybersecurity</span>
+                        <span class="tag">In Progress</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
     <!-- Composition Section -->
     <section class="section">
         <div class="section-header">
@@ -338,7 +434,6 @@
             </div>
         </div>
     </section>
-
     <!-- Contact Section -->
     <section class="section" id="contact">
         <div class="section-header">
@@ -366,7 +461,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -374,13 +468,7 @@
             <p class="footer-credit">Designed & Built with HTML, CSS & JavaScript | Hosted on GitHub Pages</p>
         </div>
     </footer>
+    <script src="script.js"></script>
+</body>
+</html>
 
-    <script src="script.js"></script>
-</body>
-</html>
-    <footer>
-        <p>&copy; 2026 Tometri. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
