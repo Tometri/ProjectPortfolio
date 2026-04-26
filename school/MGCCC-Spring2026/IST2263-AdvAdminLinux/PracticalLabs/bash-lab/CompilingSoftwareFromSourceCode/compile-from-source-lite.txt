@@ -1,0 +1,128 @@
+ gcc --version
+gcc (Debian 14.2.0-19) 14.2.0
+Copyright (C) 2024 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+make --version
+GNU Make 4.4.1
+Built for x86_64-pc-linux-gnu
+Copyright (C) 1988-2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+ls
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 1904k  100 1904k    0     0  1372k      0  0:00:01  0:00:01 --:--:-- 4988k
+aclocal.m4  ChangeLog  configure     COPYING  jq.1           jq.spec   libjq.pc.in  Makefile.am  modules  README.md  src
+AUTHORS     config     configure.ac  docs     jq.1.prebuilt  libjq.pc  m4           Makefile.in  NEWS.md  scripts    tests
+
+dpkg -l | egrep 'autoconf|automake|libtool|bison|flex'
+ii  autoconf                                      2.72-3.1                             all          automatic configure script builder
+ii  automake                                      1:1.17-4                             all          Tool for generating GNU Standards-compliant Makefiles
+ii  bison                                         2:3.8.2+dfsg-1+b2                    amd64        YACC-compatible parser generator
+ii  flex                                          2.6.4-8.2+b4                         amd64        fast lexical analyzer generator
+ii  jq                                            1.7.1-6+deb13u1                      amd64        lightweight and flexible command-line JSON processor
+ii  libfl-dev:amd64                               2.6.4-8.2+b4                         amd64        static library for flex (a fast lexical analyzer generator)
+ii  libfl2:amd64                                  2.6.4-8.2+b4                         amd64        SHARED library for flex (a fast lexical analyzer generator)
+ii  libjq1:amd64                                  1.7.1-6+deb13u1                      amd64        lightweight and flexible command-line JSON processor - shared library
+ii  libltdl-dev:amd64                             2.5.4-4                              amd64        System independent dlopen wrapper for GNU libtool (headers)
+ii  libltdl7:amd64                                2.5.4-4                              amd64        System independent dlopen wrapper for GNU libtool
+ii  libltdl7:i386                                 2.5.4-4                              i386         System independent dlopen wrapper for GNU libtool
+ii  libtool                                       2.5.4-4                              all          Generic library support script
+
+══[>>] >_ tail -n 20 config.log 2>/dev/null || echo "See terminal scrollback for make output"
+#define HAVE_SCALB 1
+#define HAVE_SCALBLN 1
+#define HAVE_SIGNIFICAND 1
+#define HAVE_SCALBN 1
+#define HAVE_ILOGB 1
+#define HAVE_SIN 1
+#define HAVE_SINH 1
+#define HAVE_SQRT 1
+#define HAVE_TAN 1
+#define HAVE_TANH 1
+#define HAVE_TGAMMA 1
+#define HAVE_TRUNC 1
+#define HAVE_Y0 1
+#define HAVE_Y1 1
+#define HAVE_YN 1
+#define HAVE___THREAD 1
+#define IEEE_8087 1
+#define HAVE_LIBONIG 1
+
+configure: exit 0
+
+find . -maxdepth 2 -name 'test-suite.log' -print -exec tail -n 20 {} \;
+./test-suite.log
+================================
+   jq 1.7.1: ./test-suite.log
+================================
+
+# TOTAL: 8
+# PASS:  8
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+
+.. contents:: :depth: 2
+
+which jq
+jq --version
+/usr/local/bin/jq
+jq-1.7.1
+
+echo '{"name":"James","class":"Linux"}' | jq .
+{
+  "name": "James",
+  "class": "Linux"
+}
+
+sudo make uninstall
+Making uninstall in modules/oniguruma
+make[1]: Entering directory '/home/tometri/Documents/GitHub/ProjectPortfolio/school/MGCCC-Spring2026/IST2263-AdvAdminLinux/PracticalLabs/bash-lab/CompilingSoftwareFromSourceCode/jq-1.7.1/modules/oniguruma'
+Making uninstall in src
+make[2]: Entering directory '/home/tometri/Documents/GitHub/ProjectPortfolio/school/MGCCC-Spring2026/IST2263-AdvAdminLinux/PracticalLabs/bash-lab/CompilingSoftwareFromSourceCode/jq-1.7.1/modules/oniguruma/src'
+ ( cd '/usr/local/include' && rm -f oniguruma.h oniggnu.h )
+ /bin/bash ../libtool   --mode=uninstall rm -f '/usr/local/lib/libonig.la'
+libtool: uninstall: rm -f /usr/local/lib/libonig.la /usr/local/lib/libonig.so.5.3.0 /usr/local/lib/libonig.so.5 /usr/local/lib/libonig.so /usr/local/lib/libonig.a
+make  uninstall-hook
+make[3]: Entering directory '/home/tometri/Documents/GitHub/ProjectPortfolio/school/MGCCC-Spring2026/IST2263-AdvAdminLinux/PracticalLabs/bash-lab/CompilingSoftwareFromSourceCode/jq-1.7.1/modules/oniguruma/src'
+make[3]: Nothing to be done for 'uninstall-hook'.
+make[3]: Leaving directory '/home/tometri/Documents/GitHub/ProjectPortfolio/school/MGCCC-Spring2026/IST2263-AdvAdminLinux/PracticalLabs/bash-lab/CompilingSoftwareFromSourceCode/jq-1.7.1/modules/oniguruma/src'
+make[2]: Leaving directory '/home/tometri/Documents/GitHub/ProjectPortfolio/school/MGCCC-Spring2026/IST2263-AdvAdminLinux/PracticalLabs/bash-lab/CompilingSoftwareFromSourceCode/jq-1.7.1/modules/oniguruma/src'
+Making uninstall in test
+make[2]: Entering directory '/home/tometri/Documents/GitHub/ProjectPortfolio/school/MGCCC-Spring2026/IST2263-AdvAdminLinux/PracticalLabs/bash-lab/CompilingSoftwareFromSourceCode/jq-1.7.1/modules/oniguruma/test'
+make[2]: Nothing to be done for 'uninstall'.
+make[2]: Leaving directory '/home/tometri/Documents/GitHub/ProjectPortfolio/school/MGCCC-Spring2026/IST2263-AdvAdminLinux/PracticalLabs/bash-lab/CompilingSoftwareFromSourceCode/jq-1.7.1/modules/oniguruma/test'
+Making uninstall in sample
+make[2]: Entering directory '/home/tometri/Documents/GitHub/ProjectPortfolio/school/MGCCC-Spring2026/IST2263-AdvAdminLinux/PracticalLabs/bash-lab/CompilingSoftwareFromSourceCode/jq-1.7.1/modules/oniguruma/sample'
+make[2]: Nothing to be done for 'uninstall'.
+make[2]: Leaving directory '/home/tometri/Documents/GitHub/ProjectPortfolio/school/MGCCC-Spring2026/IST2263-AdvAdminLinux/PracticalLabs/bash-lab/CompilingSoftwareFromSourceCode/jq-1.7.1/modules/oniguruma/sample'
+make[2]: Entering directory '/home/tometri/Documents/GitHub/ProjectPortfolio/school/MGCCC-Spring2026/IST2263-AdvAdminLinux/PracticalLabs/bash-lab/CompilingSoftwareFromSourceCode/jq-1.7.1/modules/oniguruma'
+ ( cd '/usr/local/bin' && rm -f onig-config )
+ ( cd '/usr/local/lib/pkgconfig' && rm -f oniguruma.pc )
+make[2]: Leaving directory '/home/tometri/Documents/GitHub/ProjectPortfolio/school/MGCCC-Spring2026/IST2263-AdvAdminLinux/PracticalLabs/bash-lab/CompilingSoftwareFromSourceCode/jq-1.7.1/modules/oniguruma'
+make[1]: Leaving directory '/home/tometri/Documents/GitHub/ProjectPortfolio/school/MGCCC-Spring2026/IST2263-AdvAdminLinux/PracticalLabs/bash-lab/CompilingSoftwareFromSourceCode/jq-1.7.1/modules/oniguruma'
+make[1]: Entering directory '/home/tometri/Documents/GitHub/ProjectPortfolio/school/MGCCC-Spring2026/IST2263-AdvAdminLinux/PracticalLabs/bash-lab/CompilingSoftwareFromSourceCode/jq-1.7.1'
+ ( cd '/usr/local/bin' && rm -f jq )
+ ( cd '/usr/local/share/doc/jq' && rm -f README.md NEWS.md COPYING AUTHORS )
+ ( cd '/usr/local/include' && rm -f jv.h jq.h )
+ /bin/bash ./libtool   --mode=uninstall rm -f '/usr/local/lib/libjq.la'
+libtool: uninstall: rm -f /usr/local/lib/libjq.la /usr/local/lib/libjq.so.1.0.4 /usr/local/lib/libjq.so.1 /usr/local/lib/libjq.so /usr/local/lib/libjq.a
+ ( cd '/usr/local/share/man/man1' && rm -f jq.1 )
+ ( cd '/usr/local/lib/pkgconfig' && rm -f libjq.pc )
+make[1]: Leaving directory '/home/tometri/Documents/GitHub/ProjectPortfolio/school/MGCCC-Spring2026/IST2263-AdvAdminLinux/PracticalLabs/bash-lab/CompilingSoftwareFromSourceCode/jq-1.7.1'
+
+which jq
+/usr/bin/jq
+
+
+1.The purpose of ./configure is to check for requirements, figure out system details, and generates final build files.
+2.make reads instructions from the makefile and executes the build plan.
+3. Apt tracks packages,installs/updates them, and uses packages which have typically been tested already. Make is more manual, manual upgrading and ensuring the right libraries and their versions eixist, new upgrades have to be reconfigured/installed/etc, and source builds may not be tested for the used distro.
+
