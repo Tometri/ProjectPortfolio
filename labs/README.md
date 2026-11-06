@@ -4,7 +4,7 @@ Standalone, focused labs for practical skill development.
 
 ## Current State
 
-- This section is ready for curated portfolio labs with reproducible steps.
+- This section holds the Google ADK agent workspace (`adk-workspace/`: `my_first_agent/`, `my_config_agent/`, `GoogleSkillsADKppts/`) and `codedex/` exercises. New curated labs should follow the pattern below.
 
 ## Recommended Lab Pattern
 

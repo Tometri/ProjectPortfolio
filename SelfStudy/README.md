@@ -4,11 +4,7 @@ Personal practice and experimentation outside of coursework.
 
 ## Topic Folders
 
-- [`cloud`](cloud/)
-- [`linux`](linux/)
-- [`networking`](networking/)
-- [`scripting`](scripting/)
-- [`security`](security/)
+- [`scripting`](scripting/) — the only topic folder here at present; other topics live in `labs/` and `school/`.
 
 ## Included Project
 

@@ -32,7 +32,7 @@ Visit my portfolio: **[https://tometri.github.io/ProjectPortfolio/](https://tome
 - `school/` — Formal coursework and assignments
 - `SelfStudy/` — Self-directed learning projects
 - `labs/` — Hands-on lab exercises
-- `Labs/` — Google ADK agent workspace
+- `labs/` — Hands-on lab exercises and Google ADK agent workspace
 - `resume/` — Resume documentation
 - `StarshipConfig/` — Terminal prompt configuration
 - `scripts/` — Maintenance and utility scripts
@@ -51,8 +51,20 @@ Visit my portfolio: **[https://tometri.github.io/ProjectPortfolio/](https://tome
 ## 🏆 Certifications
 
 - ✅ Microsoft Certified: Azure Fundamentals (AZ-900)
-- 🔄 CompTIA Security+ (In Progress)
-- 🔄 ISC2 Certified in Cybersecurity (In Progress)
+- ✅ CompTIA Security+ (SY0-701) — Earned Jun 22, 2026 (valid thru Jun 22, 2029)
+- ✅ ISC2 Certified in Cybersecurity (CC) — Earned Jul 13, 2026 (valid thru Jul 31, 2029) — ACE 3cr
+- ✅ Cato Networks SSE Expert Certification — Earned Oct 31, 2026
+- ✅ MongoDB Basics for Students — Earned Oct 31, 2026
+- ✅ SASE Business Impact and Strategy (Cato Networks) — Earned Oct 30, 2026
+- ✅ SASE Advanced Security (Cato Networks) — Earned Oct 29, 2026
+- ✅ SASE Deployment and Management (Cato Networks) — Earned Oct 29, 2026
+- ✅ SASE Expert Level 1 (Cato Networks) — Earned Oct 29, 2026
+- ✅ SASE Expert Level 2 (Cato Networks) — Earned Oct 29, 2026
+- ✅ Zero Trust Security Essentials (Cato Networks) — Earned Oct 28, 2026
+- ✅ AI in Cybersecurity (Cato Networks) — Earned Aug 24, 2026
+- ✅ AWS Educate: Introduction to Generative AI — Earned May 20, 2026
+- ✅ AI Literacy Professional (Pearson) — Earned Feb 20, 2026
+- 🔄 CompTIA Linux+ (XK0-006) — In progress, exam voucher secured
 
 ## 🔧 Maintenance
 

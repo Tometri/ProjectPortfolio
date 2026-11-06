@@ -34,3 +34,7 @@ data/*.db
 
 # Config files with secrets
 config/settings.env
+
+# SQLite and ADK session databases
+*.sqlite
+**/.adk/
